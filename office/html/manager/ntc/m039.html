@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.min.css">
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <nav class="header-aside">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </nav>
+      <div class="header-toolbar">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container">
+      <div class="content l-maxWidth content__list">
+        <div class="table">
+          <div class="table-head">
+            <a href="javascript:;" class="btn-register comm-btn btn-gray bd-radius-3">추가</a>
+          </div>
+          <div class="table-body">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <colgroup>
+                <col width="18%"> <!-- 제목 -->
+                <col width="*"> <!-- 내용 -->
+                <col width="13%"> <!-- 등록일 -->
+                <col width="13%"> <!-- 공지사항 번호 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-move">
+                      제목
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      내용
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      등록일
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      공지사항 번호
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tr-infos">
+                  <td>
+                    <p class="text-content">제목이 들어갑니다!! 제목이 들어갑니다!! 제목이 들어갑니다!! 제목이 들어갑니다!! 제목이 들어갑니다!! 제목이 들어갑니다!!</p>
+                  </td>
+                  <td>
+                    <p class="text-content">내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!! 내용이
+                      들어갑니다!! 내용이 들어갑니다!!내용이
+                      들어갑니다!! 내용이 들어갑니다!!내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!! 내용이 들어갑니다!!
+                      내용이들어갑니다!! 내용이 들어갑니다!!내용이 들어갑니다!! 내용이 들어갑니다!!</p>
+                  </td>
+                  <td>YYYY-MM-DD</td>
+                  <td>11111</td>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <div class="table-nopost">
+                      등록된 정보가 없습니다.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- //table -->
+
+        <div class="popup-details__inner">
+          <div class="popup-details">
+            <div class="card-head">
+              <div class="card-title">공지사항</div>
+              <div class="card-btns">
+                <div class="more-inner">
+                  <button type="button" class="btn-more">더보기</button>
+                  <div class="dropdown-menu">
+                    <ul class="dropdown-list">
+                      <li><a href="javascript:;" class="btn-modify">수정</a></li>
+                      <li><a href="javascript:;" class="btn-delete" data-modal-open="basic-guide">삭제</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <button type="button" class="btn-close">닫기</button>
+              </div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view form-create">
+                <form action="" class="popup-details__form">
+                  <div class="form-row-inner">
+                    <div class="form-row">
+                      <label for="f_title" class="lbl">제목</label>
+                      <textarea name="" id="f_title" class="int int-title" placeholder="공지사항 제목" required></textarea>
+                      <p class="text-error">
+                        제목을 입력해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_editor" class="lbl">내용</label>
+                      <div class="form-editor" style="height:400px">
+                        오픈에디터사용
+                      </div>
+                      <p class="text-error">
+                        내용을 입력해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                  </div>
+                  <div class="form-btns">
+                    <button type="submit" class="btn-form-submit comm-btn btn-md bd-radius-5 btn-gray" disabled>공지사항
+                      등록</button>
+                  </div><!-- //form-btns -->
+                </form>
+              </div><!-- //form-create -->
+              <div class="form-view form-detail">
+                <div class="form-detail-head">
+                  <p class="form-text">제목이 들어갑니다.</p>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body">
+                  <div class="form-detail-cont">
+                    오픈에디터사용
+                  </div>
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+        </div><!-- //popup-details__inner -->
+
+        <div class="snackbars"></div><!-- //snackbars -->
+
+        <div class="modal" id="basic-guide">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">삭제</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="modal-desc p2">
+                  삭제 하시겠습니까?
+                </div>
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit" data-modal-submit>확인</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+      </div><!-- //content -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../../assets/js/common.js">/* 공통(레이아웃/스낵바) */</script>
+  <script type="text/javascript" src="../../../assets/js/modal.js">/* 모달창 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/table.js">/* 테이블 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/form.js">/* 폼 영역에 해당 */</script>
+</body>
+
+</html>

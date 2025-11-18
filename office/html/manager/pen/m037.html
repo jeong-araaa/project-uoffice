@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.min.css">
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <nav class="header-aside">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </nav>
+      <div class="header-toolbar">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container">
+      <div class="content l-maxWidth content__list">
+        <div class="table">
+          <div class="table-head">
+            <!-- 251017 수정 -->
+            <div class="table-head-title"><strong>10</strong>월</div>
+            <!-- //251017 수정 -->
+          </div>
+          <div class="table-body">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <colgroup>
+                <col width="16%"> <!-- 이름 -->
+                <col width="13%"> <!-- 벌점 합산 -->
+                <col width="14%"> <!-- 신규 상점/벌점 -->
+                <col width="18%"> <!-- 부여시간 -->
+                <col width="*"> <!-- 벌점사유 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-move">
+                      이름
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      벌점 합산
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      신규 상점/벌점
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      부여시간
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      벌점사유
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>30</td>
+                  <td>+ 5</td>
+                  <td>YYYY-MM-DD HH:MM:SS</td>
+                  <td>학습 외 목적으로 전자기기 사용 방해</td>
+                </tr>
+                <tr>
+                  <td colspan="5">
+                    <div class="table-nopost">
+                      등록된 정보가 없습니다.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- //table -->
+
+        <div class="popup-details__inner">
+          <div class="popup-details">
+            <div class="card-head">
+              <div class="card-title">
+                <button type="button" class="btn-back">뒤로</button> 벌점
+              </div>
+              <div class="card-btns">
+                <button type="button" class="btn-add" data-modal-open="modal-demerit">추가</button>
+              </div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view form-detail">
+                <!-- 251014 수정 -->
+                <div class="form-datas">
+                  <div class="date-field">
+                    <input type="date" class="int">
+                    <button type="button" class="btn-calendar"></button>
+                  </div>
+                  <span>~</span>
+                  <div class="date-field">
+                    <input type="date" class="int">
+                    <button type="button" class="btn-calendar"></button>
+                  </div>
+                  <button type="button" class="comm-btn btn-gray bd-radius-4">적용</button>
+                </div>
+                <!-- //251014 수정 -->
+                <div class="form-detail-head">
+                  <div class="form-col">
+                    <div class="lbl">벌점 합산</div>
+                    <p class="form-text"><strong>30점</strong></p>
+                  </div>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body detail-penalty">
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">졸음</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+        </div><!-- //popup-details__inner -->
+
+        <div class="snackbars"></div><!-- //snackbars -->
+
+        <!-- 모달 삭제 -->
+        <div class="modal" id="modal-delete">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-body">
+                <div class="modal-desc p2">
+                  <p class="modal-desc-title">벌점 삭제</p>
+                  벌점을 삭제 하시겠습니까?
+                </div>
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="javascript:;" class="modal-btn-submit" data-modal-close>벌점삭제</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+
+        <div class="modal" id="modal-demerit">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">벌점 추가</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="form-col">
+                  <p class="form-text gap-20"><span>정이름</span> 010-1234-1234</p>
+                </div>
+                <div class="form-col">
+                  <select id="demerit_select" class="int">
+                    <option>벌점선택</option>
+                    <option value="">졸음</option>
+                    <option value="">학슴 외 사이트 접속</option>
+                    <option value="">휴대폰사용</option>
+                    <option value="">학습 분위기 저해</option>
+                    <option value="etc">기타</option>
+                  </select>
+                </div><!-- //form-col -->
+                <div class="form-col form-etc" style="display: none;">
+                  <select id="demerit_point" class="int" style="width:100px">
+                    <option value="-1">-1</option>
+                    <option value="-2">-2</option>
+                    <option value="-3">-3</option>
+                    <option value="-4">-4</option>
+                    <option value="-5">-5</option>
+                    <option value="-6">-6</option>
+                    <option value="-7">-7</option>
+                    <option value="-8">-8</option>
+                    <option value="-9">-9</option>
+                    <option value="-10">-10</option>
+                    <option value="1">+1</option>
+                    <option value="2">+2</option>
+                    <option value="3">+3</option>
+                    <option value="4">+4</option>
+                    <option value="5">+5</option>
+                    <option value="6">+6</option>
+                    <option value="7">+7</option>
+                    <option value="8">+8</option>
+                    <option value="9">+9</option>
+                    <option value="10">+10</option>
+                  </select>
+                  <input type="text" class="int" placeholder="벌점내용 입력">
+                </div><!-- //form-col -->
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit" data-modal-submit>추가</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+      </div><!-- //content -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../../assets/js/common.js">/* 공통(레이아웃/스낵바) */</script>
+  <script type="text/javascript" src="../../../assets/js/modal.js">/* 모달창 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/table.js">/* 테이블 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/form.js">/* 폼 영역에 해당 */</script>
+  <script>
+    // ==========================
+    // 벌점 기타 선택 시 노출
+    // ==========================
+    document.addEventListener('change', function (e) {
+      if (!e.target.matches('#demerit_select')) return;
+      const etcBox = document.querySelector('.form-etc');
+      if (!etcBox) return;
+
+      if (e.target.value === 'etc') {
+        etcBox.style.display = 'flex'; // 또는 block
+      } else {
+        etcBox.style.display = 'none';
+      }
+    });
+
+    // ==========================
+    // 커스텀 캘린더 버튼 클릭 시 input 클릭 트리거
+    // ==========================
+    document.querySelectorAll('.form-datas .btn-calendar').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = btn.previousElementSibling;
+        if (input && input.type === 'date') {
+          input.showPicker?.(); // 최신 브라우저(크롬, 사파리)
+          input.focus();        // 혹시 showPicker 미지원 시 포커스
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

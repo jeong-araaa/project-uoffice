@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.min.css">
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <nav class="header-aside">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </nav>
+      <div class="header-toolbar">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container">
+      <div class="content l-maxWidth content__list content-attendance">
+        <div class="table">
+          <div class="table-head">
+            <div class="form-dates">
+              <button type="button" class="dates__select">
+                <span class="dates__value">오늘</span>
+                <i class="ico_select"></i>
+              </button>
+              <ul class="dates__options">
+                <li class="dates__option is-selected" data-value="오늘">오늘</li>
+                <li class="dates__option" data-value="어제">어제</li>
+                <li class="dates__option period" data-value="날짜선택">날짜선택</li>
+              </ul>
+              <div class="period-inner" style="display: none;">
+                <div class="int-date">
+                  <input type="date" class="int" style="width:165px;">
+                  <button type="button" class="comm-btn btn-gray bd-radius-4">적용</button>
+                </div>
+              </div>
+            </div>
+            <div class="table-box">
+              <div class="period-item" data-period="1">
+
+                <div class="period-item__label">1교시</div>
+                <div class="period-item__picker">
+                  <button type="button" class="period-item__select" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="period-item__value">오전 08:00~09:00</span>
+                    <i class="ico_select"></i>
+                  </button>
+                  <ul class="period-item__options" role="listbox" tabindex="-1">
+                    <li class="period-item__option is-selected" role="option" aria-selected="true"
+                      data-value="오전 08:00-09:00">오전 08:00~09:00</li>
+                    <li class="period-item__option" role="option" data-value="오전 09:20-10:40">오전 09:20~10:40</li>
+                    <li class="period-item__option" role="option" data-value="오전 11:00-12:10">오전 11:00~12:10</li>
+                    <li class="period-item__option" role="option" data-value="오후 01:30-02:50">오후 01:30~02:50</li>
+                    <li class="period-item__option" role="option" data-value="오후 03:10-04:30">오후 03:10~04:30</li>
+                    <li class="period-item__option" role="option" data-value="오후 04:50-06:00">오후 04:50~06:00</li>
+                    <li class="period-item__option" role="option" data-value="오후 07:10-08:30">오후 07:20~08:30</li>
+                    <li class="period-item__option" role="option" data-value="오후 08:50-10:00">오후 08:50~10:00</li>
+                  </ul>
+                  <input type="hidden" name="period[1]" value="08:00-09:00">
+                </div>
+                <button type="button" class="period-item__phone" data-modal-open="modal-seat">휴대폰 반납현황</button>
+              </div>
+              <div class="board-box">
+                <div class="board-box__inner">
+                  <p class="board-box__title">전체</p>
+                  <div class="board-box__number">
+                    <h4 class="d-inline me-5">100</h4>
+                  </div>
+                </div>
+                <div class="board-box__inner">
+                  <p class="board-box__title">현재</p>
+                  <div class="board-box__number">
+                    <h4 class="d-inline me-5">100</h4>
+                  </div>
+                </div>
+                <div class="board-box__inner">
+                  <p class="board-box__title">출석</p>
+                  <div class="board-box__number">
+                    <h4 class="d-inline me-5">100</h4>
+                  </div>
+                </div>
+                <div class="board-box__inner">
+                  <p class="board-box__title">미출석</p>
+                  <div class="board-box__number">
+                    <h4 class="d-inline me-5">100</h4>
+                  </div>
+                </div>
+                <div class="board-box__inner">
+                  <p class="board-box__title">지각</p>
+                  <div class="board-box__number">
+                    <h4 class="d-inline me-5">100</h4>
+                  </div>
+                </div>
+                <div class="board-box__inner">
+                  <p class="board-box__title">조퇴</p>
+                  <div class="board-box__number">
+                    <h4 class="d-inline me-5">100</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-body">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <colgroup>
+                <col width="11%"> <!-- 출석현황 -->
+                <col width="14%"> <!-- 이름 -->
+                <col width="9%"> <!-- 출입 -->
+                <col width="*"> <!-- 정기일정 -->
+                <col width="*"> <!-- 사유 -->
+                <col width="15%"> <!-- 연락처 -->
+                <col width="12%"> <!-- 휴대폰제출 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-move">
+                      출석현황
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      이름
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      출입
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      정기일정
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      사유
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      연락처
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      휴대폰제출
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-absent">미출석</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-drak">None</span></td>
+                  <td>
+                    <p>지각/ 학원관련</p>
+                    <p>관리자 승인 / 학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td></td>
+                  <td>010-1234-1234</td>
+                  <td>none</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-absent">미출석</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-drak">None</span></td>
+                  <td>
+                    <p>지각/ 학원관련</p>
+                    <p>관리자 승인 / 학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td></td>
+                  <td>010-1234-1234</td>
+                  <td>none</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-absent">미출석</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-drak">None</span></td>
+                  <td></td>
+                  <td>
+                    <p>지각/ 학원관련</p>
+                    <p>관리자 승인 / 학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td>010-1234-1234</td>
+                  <td>none</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-absent">미출석</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-drak">None</span></td>
+                  <td></td>
+                  <td>
+                    <p>지각/ 학원관련</p>
+                    <p>관리자 승인 / 학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td>010-1234-1234</td>
+                  <td>none</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-late">지각</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-success">IN 12:11:11</span></td>
+                  <td></td>
+                  <td>
+                    <p>지각 / 학원관련</p>
+                    <p>학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td>010-1234-1234</td>
+                  <td>제출</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-late">지각</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-success">IN 12:11:11</span></td>
+                  <td></td>
+                  <td>
+                    <p>지각 / 학원관련</p>
+                    <p>학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td>010-1234-1234</td>
+                  <td>제출</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-early">조퇴</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-danger">OUT 11:11:11</span></td>
+                  <td></td>
+                  <td>
+                    <p>조퇴 / 병원</p>
+                    <p>학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td>010-1234-1234</td>
+                  <td>제출</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-early">조퇴</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-danger">OUT 11:11:11</span></td>
+                  <td></td>
+                  <td>
+                    <p>조퇴 / 병원</p>
+                    <p>학부모 승인</p>
+                    <p>출석 예정 : 11:11</p>
+                  </td>
+                  <td>010-1234-1234</td>
+                  <td>미제출</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-present">출석</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-success">IN 12:11:11</span></td>
+                  <td></td>
+                  <td></td>
+                  <td>010-1234-1234</td>
+                  <td>미제출</td>
+                </tr>
+                <tr class="tr-infos" data-details-open="popup-details">
+                  <td><span class="status-item status-outing">외출</span></td>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td><span class="text-success">IN 12:11:11</span></td>
+                  <td></td>
+                  <td></td>
+                  <td>010-1234-1234</td>
+                  <td>미제출</td>
+                </tr>
+                <tr>
+                  <td colspan="7">
+                    <div class="table-nopost">
+                      등록된 정보가 없습니다.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- //table -->
+
+        <div class="popup-details__inner">
+          <div class="popup-details">
+            <div class="card-head">
+              <div class="card-title">출결 상세</div>
+              <div class="card-btns">
+                <button type="button" class="btn-close">닫기</button>
+              </div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view form-detail">
+                <div class="form-detail-head">
+                  <div class="form-name">
+                    <div class="form-filebox">
+                      <img src="../../../assets/img/sub/img_user.png" alt="증명사진">
+                    </div>
+                    <div class="name-inner">
+                      <p>정이름</p>
+                      <p class="name-phone">010-1234-1234</p>
+                    </div>
+                  </div>
+                  <div class="form-myinfo">
+                    <button type="button" class="btn-seat" data-details-open="popup-seat"><strong>100</strong></button>
+                    <div class="btn-inner">
+                      <button type="button" class="btn-messages" data-details-open="popup-messages">문자</button>
+                      <button type="button" class="btn-call" data-details-open="popup-phone">전화</button>
+                      <button type="button" class="btn-chat" data-details-open="popup-messages2">채팅</button>
+                    </div>
+                  </div>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body">
+                  <ul class="state-list">
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>1</strong> 교시
+                      </div>
+                      <div class="status-item status-outing">
+                        외출
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>2</strong> 교시
+                      </div>
+                      <div class="status-item status-late">
+                        지각
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>3</strong> 교시
+                      </div>
+                      <div class="status-item status-early">
+                        조퇴
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>4</strong> 교시
+                      </div>
+                      <div class="status-item status-present">
+                        출석
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>5</strong> 교시
+                      </div>
+                      <div class="status-item status-absent">
+                        미출석
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>6</strong> 교시
+                      </div>
+                      <div class="status-item status-absent">
+                        미출석
+                      </div>
+                    </li>
+                    <li>
+                      <div class="status-title">
+                        <strong>7</strong> 교시
+                      </div>
+                    </li>
+                    <li>
+                      <div class="status-title">
+                        <strong>8</strong> 교시
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="navi-list">
+                    <li><a href="javascript:;" data-details-open="popup-demerit">벌점</a></li>
+                    <li><a href="javascript:;" data-details-open="popup-log">출입 기록</a></li>
+                  </ul>
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 순찰좌석-->
+          <div class="popup-details details-2depth" id="popup-seat">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> 순찰 좌석</div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view" style="display: block;">
+                <div class="form-detail-head">
+                  <div class="form-seat">
+                    <strong>100</strong>
+                    <p>좌석번호</p>
+                    <input type="date" class="int">
+                  </div>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body">
+                  <ul class="state-list">
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>1</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p>공부 중</p>
+                        <p>학습분위기 저해</p>
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>2</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p>공부 중</p>
+                        <p>학습분위기 저해</p>
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>3</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p>공부 중</p>
+                        <p>학습분위기 저해</p>
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>4</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p>공부 중</p>
+                        <p>학습분위기 저해</p>
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>5</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p>공부 중</p>
+                        <p>학습분위기 저해</p>
+                      </div>
+                    </li>
+                    <li class="is-active">
+                      <div class="status-title">
+                        <strong>6</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p>공부 중</p>
+                        <p>학습분위기 저해</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="status-title">
+                        <strong>7</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p></p>
+                        <p></p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="status-title">
+                        <strong>8</strong> 교시
+                      </div>
+                      <div class="status-infos">
+                        <p></p>
+                        <p></p>
+                      </div>
+                    </li>
+                  </ul>
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 DM -->
+          <div class="popup-details details-2depth" id="popup-messages">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> DM</div>
+            </div><!-- //card-head -->
+            <ul class="tabmenu-line">
+              <li data-tab="0" class="active"><a href="javascript:;">학생</a></li>
+              <li data-tab="1"><a href="javascript:;">학부모</a></li>
+            </ul>
+            <div class="chat-wrap">
+              <div class="chat-area" data-tab-panel="0">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <p class="chat-date"><span>11.12 목</span></p>
+                  <div class="chat-box no-time chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+              <div class="chat-area" data-tab-panel="1" style="display: none;">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      학부모한테 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+            </div>
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 문자 -->
+          <div class="popup-details details-2depth" id="popup-messages2">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> 문자</div>
+            </div><!-- //card-head -->
+            <ul class="tabmenu-line">
+              <li data-tab="0" class="active"><a href="javascript:;">학생</a></li>
+              <li data-tab="1"><a href="javascript:;">학부모</a></li>
+            </ul>
+            <div class="chat-wrap">
+              <div class="chat-area" data-tab-panel="0">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <p class="chat-date"><span>11.12 목</span></p>
+                  <div class="chat-box no-time chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+              <div class="chat-area" data-tab-panel="1" style="display: none;">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      학부모한테 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+            </div>
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 전화 -->
+          <div class="popup-details details-2depth" id="popup-phone">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> 통화</div>
+            </div><!-- //card-head -->
+            <ul class="tabmenu-line">
+              <li data-tab="0" class="active"><a href="javascript:;">학생</a></li>
+              <li data-tab="1"><a href="javascript:;">학부모</a></li>
+            </ul>
+            <div class="chat-wrap">
+              <div class="chat-area" data-tab-panel="0">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="phone-box">
+                    <span class="phone-date">시작 11:11</span>
+                    <div class="phone-item">
+                      <p class="item-1">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                      <p class="item-2">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                    </div>
+                    <span class="phone-date">종료 11:11</span>
+                  </div><!-- //chat-box -->
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="phone-box">
+                    <span class="phone-date">시작 11:11</span>
+                    <div class="phone-item">
+                      <p class="item-1">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                      <p class="item-2">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                    </div>
+                    <span class="phone-date">종료 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <button type="button" class="btn-call" data-modal-open="modal-call">전화걸기</button>
+                </div>
+              </div>
+              <div class="chat-area" data-tab-panel="1" style="display: none;">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.14 수</span></p>
+                  <div class="phone-box">
+                    <span class="phone-date">시작 11:11</span>
+                    <div class="phone-item">
+                      <p class="item-1">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                      <p class="item-2">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                    </div>
+                    <span class="phone-date">종료 11:11</span>
+                  </div><!-- //phone-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <button type="button" class="btn-call" data-modal-open="modal-call">전화걸기</button>
+                </div>
+              </div>
+            </div><!-- //chat-wrap -->
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 벌점 -->
+          <div class="popup-details details-2depth" id="popup-demerit">
+            <div class="card-head">
+              <div class="card-title">
+                <button type="button" class="btn-back">뒤로</button> 벌점
+              </div>
+              <div class="card-btns">
+                <button type="button" class="btn-add" data-modal-open="modal-demerit">추가</button>
+              </div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view form-detail" style="display: block;">
+                <div class="form-datas">
+                  <input type="date" class="int">
+                  <span>~</span>
+                  <input type="date" class="int">
+                </div>
+                <div class="form-detail-head">
+                  <div class="form-col">
+                    <div class="lbl">벌점 합산</div>
+                    <p class="form-text"><strong>30점</strong></p>
+                  </div>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body detail-penalty">
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">졸음</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-row">
+                      <p class="form-text">-2점</p>
+                      <p class="form-text-date">YYYY-MM-DD</p>
+                      <p class="form-text mt-10">학습 외 목적으로 전자기기 사용 방해</p>
+                    </div>
+                    <button type="button" class="btn-file-remove" data-modal-open="modal-delete"></button>
+                  </div><!-- //form-detail-inner -->
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 출입기록 -->
+          <div class="popup-details details-2depth" id="popup-log">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> 출입기록</div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view form-detail" style="display: block;">
+                <!-- 251111 수정 -->
+                <div class="form-detail-head between">
+                  <input type="date" class="int" style="width:275px;">
+                  <button type="button" class="comm-btn btn-gray bd-radius-4">적용</button>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body">
+                  <ul class="log-list">
+                    <li>
+                      <div class="log-title">HH:MM:SS</div>
+                      <div class="log-item text-success">IN</div>
+                    </li>
+                    <li>
+                      <div class="log-title">HH:MM:SS</div>
+                      <div class="log-item text-danger">Out</div>
+                    </li>
+                    <li>
+                      <div class="log-title">HH:MM:SS</div>
+                      <div class="log-item text-dark">None</div>
+                    </li>
+                  </ul>
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+        </div>
+
+
+
+        <!-- 모달 전화걸기 -->
+        <div class="modal" id="modal-call">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-body">
+                <div class="modal-desc p2">
+                  <p class="modal-desc-title">전화걸기 학생</p>
+                  정이름 010-1234-1234 (정이름 학부모)
+                </div>
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit">전화걸기</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+
+        <!-- 모달 휴대폰 반납현황 -->
+        <div class="modal" id="modal-seat">
+          <div class="modal-wrap">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:600px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">휴대폰 반납현황</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="seat-image">
+                  <img src="../../../assets/img/sub/img_seat.jpg" alt="촬영이미지">
+                </div>
+                <div class="seat-number">
+                  <ul class="seat-number-list">
+                    <li class="is-active">1</li>
+                    <li class="is-active">2</li>
+                    <li class="is-active">3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li class="is-none">12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15</li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22</li>
+                    <li class="is-none">23</li>
+                    <li class="is-none">24</li>
+                    <li class="is-none">25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29</li>
+                    <li>30</li>
+                    <li>31</li>
+                    <li>32</li>
+                    <li>33</li>
+                    <li>34</li>
+                    <li>35</li>
+                    <li>36</li>
+                    <li>37</li>
+                    <li>38</li>
+                    <li>39</li>
+                    <li>40</li>
+                    <li>41</li>
+                    <li>42</li>
+                    <li>43</li>
+                    <li>44</li>
+                    <li>45</li>
+                    <li>46</li>
+                    <li>47</li>
+                    <li>48</li>
+                    <li>49</li>
+                    <li>50</li>
+                  </ul>
+                </div>
+              </div><!-- //modal-body -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+
+        <!-- 모달 벌점 -->
+        <div class="modal" id="modal-demerit">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">벌점 추가</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="form-col">
+                  <p class="form-text gap-20"><span>정이름</span> 010-1234-1234</p>
+                </div>
+                <div class="form-col">
+                  <select id="demerit_select" class="int">
+                    <option>벌점선택</option>
+                    <option value="">졸음</option>
+                    <option value="">학슴 외 사이트 접속</option>
+                    <option value="">휴대폰사용</option>
+                    <option value="">학습 분위기 저해</option>
+                    <option value="etc">기타</option>
+                  </select>
+                </div><!-- //form-col -->
+                <div class="form-col form-etc" style="display: none;">
+                  <select id="demerit_point" class="int" style="width:100px">
+                    <option value="-1">-1</option>
+                    <option value="-2">-2</option>
+                    <option value="-3">-3</option>
+                    <option value="-4">-4</option>
+                    <option value="-5">-5</option>
+                    <option value="-6">-6</option>
+                    <option value="-7">-7</option>
+                    <option value="-8">-8</option>
+                    <option value="-9">-9</option>
+                    <option value="-10">-10</option>
+                    <option value="1">+1</option>
+                    <option value="2">+2</option>
+                    <option value="3">+3</option>
+                    <option value="4">+4</option>
+                    <option value="5">+5</option>
+                    <option value="6">+6</option>
+                    <option value="7">+7</option>
+                    <option value="8">+8</option>
+                    <option value="9">+9</option>
+                    <option value="10">+10</option>
+                  </select>
+                  <input type="text" class="int" placeholder="벌점내용 입력">
+                </div><!-- //form-col -->
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit" data-modal-submit>추가</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+
+        <!-- 모달 삭제 -->
+        <div class="modal" id="modal-delete">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-body">
+                <div class="modal-desc p2">
+                  <p class="modal-desc-title">벌점 삭제</p>
+                  벌점을 삭제 하시겠습니까?
+                </div>
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit">벌점삭제</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+
+        <div class="snackbars"></div><!-- //snackbars -->
+      </div><!-- //content -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../../assets/js/common.js">/* 공통(레이아웃/스낵바) */</script>
+  <script type="text/javascript" src="../../../assets/js/modal.js">/* 모달창 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/table.js">/* 테이블 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/form.js">/* 폼 영역에 해당 */</script>
+  <script>
+    // ==========================
+    // 1교시~8교시 선택 토글 (hover 버전)
+    // ==========================
+    const normalizeRange = (str) =>
+      str.replace(/\s+/g, '').replace(/[~－–—−]/g, '-');
+
+    function getPeriodMap(picker) {
+      if (picker._periodMap) return picker._periodMap;
+      const list = picker.querySelector('.period-item__options');
+      const options = Array.from(list.querySelectorAll('.period-item__option'));
+      picker._periodMap = new Map(
+        options.map((li, idx) => [normalizeRange(li.dataset.value || ''), idx + 1])
+      );
+      return picker._periodMap;
+    }
+
+    // 옵션 선택
+    document.addEventListener('click', function (e) {
+      const option = e.target.closest('.period-item__option');
+      if (!option) return;
+
+      const picker = option.closest('.period-item__picker');
+      const item = option.closest('.period-item');
+      const list = picker.querySelector('.period-item__options');
+      const valueEl = picker.querySelector('.period-item__value');
+      const hidden = picker.querySelector('input[type="hidden"]');
+      const labelEl = item.querySelector('.period-item__label');
+
+      const rawValue = option.dataset.value || option.textContent.trim();
+      const normValue = normalizeRange(rawValue);
+      hidden.value = normValue;
+      valueEl.textContent = option.textContent.trim();
+
+      // 선택 스타일/접근성
+      list.querySelectorAll('.period-item__option').forEach(li => {
+        const sel = li === option;
+        li.classList.toggle('is-selected', sel);
+        li.setAttribute('aria-selected', sel ? 'true' : 'false');
+        li.setAttribute('tabindex', sel ? '0' : '-1');
+      });
+
+      // 교시 라벨
+      const periodMap = getPeriodMap(picker);
+      const no = periodMap.get(normValue);
+      labelEl.textContent = no ? `${no}교시` : '맞춤시간';
+      if (no) item.dataset.period = String(no);
+
+      // 닫기
+      list.classList.remove('is-open');
+      picker.querySelector('.period-item__select').setAttribute('aria-expanded', 'false');
+      picker.querySelector('.period-item__select').focus();
+    });
+
+    // ==========================
+    // Hover 시 열기/닫기
+    // ==========================
+    document.querySelectorAll('.period-item__picker').forEach(picker => {
+      const selectBtn = picker.querySelector('.period-item__select');
+      const list = picker.querySelector('.period-item__options');
+      if (!selectBtn || !list) return;
+
+      // 마우스 올리면 열기
+      selectBtn.addEventListener('mouseenter', () => {
+        list.classList.add('is-open');
+        selectBtn.setAttribute('aria-expanded', 'true');
+      });
+
+      // picker 바깥으로 나가면 닫기
+      picker.addEventListener('mouseleave', () => {
+        list.classList.remove('is-open');
+        selectBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+
+    // ==========================
+    // 좌석 번호 선택
+    // ==========================
+    document.addEventListener('click', function (e) {
+      const li = e.target.closest('.seat-number-list li');
+      if (!li || li.classList.contains('is-none')) return;
+      li.classList.add('is-active');
+    });
+
+
+    // ==========================
+    // 탭 → chat-area 토글 (동일 블록 스코프)
+    // ==========================
+    (function () {
+      function findWrap(ul) {
+        // 탭 바로 다음에 오는 .chat-wrap 우선 탐색
+        let el = ul.nextElementSibling;
+        while (el && !(el.classList && el.classList.contains('chat-wrap'))) {
+          el = el.nextElementSibling;
+        }
+        // 없다면 같은 부모 안에서 첫 번째 .chat-wrap
+        return el || ul.parentElement.querySelector('.chat-wrap');
+      }
+
+      function showTab(ul, li) {
+        if (!ul || !li) return;
+
+        // 탭 active 관리
+        ul.querySelectorAll('li').forEach(n => n.classList.remove('active'));
+        li.classList.add('active');
+
+        // 인덱스 결정: data-tab 우선, 없으면 순서로
+        const idx = li.dataset.tab ?? Array.from(ul.children).indexOf(li);
+
+        // 같은 블록의 패널만 토글
+        const wrap = findWrap(ul);
+        if (!wrap) return;
+
+        const panels = wrap.querySelectorAll('.chat-area');
+        panels.forEach((p, i) => {
+          const key = p.dataset.tabPanel; // 있으면 매칭, 없으면 순서로
+          const on = key != null ? key === String(idx) : i === Number(idx);
+          p.style.display = on ? 'block' : 'none';
+          p.classList.toggle('active', !!on);
+        });
+      }
+
+      // 클릭으로 전환
+      document.addEventListener('click', (e) => {
+        const li = e.target.closest('.tabmenu-line li');
+        if (!li) return;
+        const ul = li.closest('.tabmenu-line');
+        showTab(ul, li);
+      });
+
+      // 초기 상태 세팅(페이지 로드 시)
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.tabmenu-line').forEach((ul) => {
+          const li = ul.querySelector('li.active') || ul.querySelector('li');
+          if (li) showTab(ul, li);
+        });
+      });
+    })();
+
+
+    // ==========================
+    // Shift + 엔터 내려쓰기
+    // ==========================
+    const textarea = document.querySelector('.chat-textarea');
+    const btnSend = document.querySelector('.chat-send');
+
+    function sendMessage() {
+      const msg = textarea.value.trim();
+      if (!msg) return;
+
+      console.log("전송:", msg); // 여기에 메시지 추가 로직
+      textarea.value = '';
+    }
+
+    textarea.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault(); // 기본 줄바꿈 막기
+        sendMessage();
+      }
+    });
+
+    btnSend.addEventListener('click', sendMessage);
+
+
+    // ==========================
+    // 벌점 기타 선택 시 노출
+    // ==========================
+    document.addEventListener('change', function (e) {
+      if (!e.target.matches('#demerit_select')) return;
+      const etcBox = document.querySelector('.form-etc');
+      if (!etcBox) return;
+
+      if (e.target.value === 'etc') {
+        etcBox.style.display = 'flex'; // 또는 block
+      } else {
+        etcBox.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>

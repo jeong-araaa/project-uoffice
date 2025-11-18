@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.min.css">
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <nav class="header-aside">
+        <h1 class="header-logo">
+          <a href="javascript:;" data-modal-open="modal-branch">본사</a>
+        </h1>
+        <div class="profile-name">
+          <a href="javascript:;">정아라/퍼블리셔</a>
+        </div>
+        <ul class="aside-menu">
+          <li class="on"><a href="javascript:;"><span class="menu-text">대시보드</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">매니저</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">지점</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">멘토</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">공동투자</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">경영분석</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">메뉴권한</span></a></li>
+        </ul><!-- //aside-menu -->
+      </nav>
+      <div class="header-toolbar">
+        <div class="filter">
+          <form action="">
+            <div class="filter-col">
+              <div class="col-int">
+                <div class="filter-int">
+                  <input type="text" id="keyword-int" class="int" placeholder="검색어를 입력하세요.">
+                </div>
+                <div class="filter-btn">
+                  <button type="button" class="comm-btn icon-btn btn-dark bd-radius-3">
+                    <i class="ico-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div><!-- //filter -->
+        <div class="header-right">
+          <a href="javascript:;" class="header-logout">로그아웃 <span class="ico_out"></span></a>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container">
+      <div class="content l-maxWidth content__list">
+        <div class="table">
+          <div class="table-head">
+            <div class="register-group">
+              <button type="button" class="btn-registers comm-btn btn-gray bd-radius-3">추가</button>
+              <ul class="btn__options">
+                <li class="btn__option btn-register" data-value="지점">지점</li>
+                <li class="btn__option btn-register" data-value="본사">본사</li>
+              </ul>
+            </div>
+          </div>
+          <div class="table-body">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <colgroup>
+                <col width="12%"> <!-- 이름 -->
+                <col width="11%"> <!-- 지점 -->
+                <col width="7%"> <!-- 직책 -->
+                <col width="10%"> <!-- 근무일정 -->
+                <col width="14%"> <!-- 연락처 -->
+                <col width="*"> <!-- 이메일 -->
+                <col width="13%"> <!-- 생년월일 -->
+                <col width="7%"> <!-- 성별 -->
+                <col width="8%"> <!-- 사용 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-move">
+                      이름
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      지점
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      직책
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      근무일정
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      연락처
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      이메일
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      생년월일
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      성별
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      사용
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>광장점 1호점</td>
+                  <td>센터장</td>
+                  <td>평일 주간</td>
+                  <td>010-1234-1234</td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>YYYY-MM-DD</td>
+                  <td>남</td>
+                  <td>사용중</td>
+                </tr>
+                <tr>
+                  <td colspan="9">
+                    <div class="table-nopost">
+                      등록된 정보가 없습니다.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- //table -->
+
+        <div class="popup-details__inner">
+          <div class="popup-details">
+            <div class="card-head">
+              <div class="card-title"><span class="title-value">지점</span>매니저</div>
+              <div class="card-btns">
+                <div class="more-inner">
+                  <button type="button" class="btn-more">더보기</button>
+                  <div class="dropdown-menu">
+                    <ul class="dropdown-list">
+                      <li><a href="javascript:;" class="btn-modify">수정</a></li>
+                      <li><a href="javascript:;" class="btn-delete" data-modal-open="basic-guide">삭제</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <button type="button" class="btn-close">닫기</button>
+              </div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view form-create">
+                <form action="" class="popup-details__form">
+                  <div class="form-row-inner">
+                    <div class="form-filebox">
+                      <div class="int-fileimg">
+                        <img src="../../../assets/img/sub/img_user.png" alt="증명사진">
+                        <!-- 선택사항: 초기엔 숨겨짐 -->
+                        <button type="button" class="btn-file-remove" aria-label="첨부파일 삭제"
+                          style="display:none;"></button>
+                      </div>
+                      <!-- <p class="int-message">
+                    * 80px x 80px / .jpg 권장
+                    </p> -->
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_name" class="lbl">이름</label>
+                      <input type="text" id="f_name" class="int" placeholder="이름" required>
+                      <p class="text-error">
+                        이름을 입력해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_phone" class="lbl">연락처</label>
+                      <input type="text" id="f_phone" class="int js-phone" inputmode="numeric" maxlength="13"
+                        placeholder="010-1234-1234" required>
+                      <p class="text-error">
+                        연락처를 입력해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_email" class="lbl">이메일</label>
+                      <input type="email" id="f_email" class="int" placeholder="abc@abc.com" required>
+                      <p class="text-error">
+                        이메일을 입력해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_birth" class="lbl">생년월일</label>
+                      <input type="text" id="f_birth" class="int js-birth" inputmode="numeric" maxlength="10"
+                        placeholder="YYYY-MM-DD" required>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_gender" class="lbl">성별</label>
+                      <select id="f_gender" class="int" required>
+                        <option value="">선택</option>
+                        <option value="남자">남자</option>
+                        <option value="여자">여자</option>
+                      </select>
+                      <p class="text-error">
+                        성별을 선택해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_branch" class="lbl">지점</label>
+                      <input type="text" id="f_branch" class="int" placeholder="지점" required>
+                      <p class="text-error">
+                        지점을 입력해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_position" class="lbl">직책</label>
+                      <select id="f_position" class="int" required>
+                        <option value="">선택</option>
+                        <option value="매니저">매니저</option>
+                        <option value="센터장">센터장</option>
+                      </select>
+                      <p class="text-error">
+                        지점을 선택해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_workSch" class="lbl">근무일정</label>
+                      <select id="f_workSch" class="int" required>
+                        <option value="">선택</option>
+                        <option value="평 일주간">평일 주간</option>
+                        <option value="평일 야간">평일 야간</option>
+                      </select>
+                      <p class="text-error">
+                        근무일정을 선택해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                    <div class="form-row">
+                      <label for="f_usage" class="lbl">사용</label>
+                      <select id="f_usage" class="int" required>
+                        <option value="">선택</option>
+                        <option value="active">사용중</option>
+                        <option value="inactive">미사용</option>
+                      </select>
+                      <p class="text-error">
+                        사용여부를 선택해주세요.
+                      </p>
+                    </div><!-- //form-row -->
+                  </div>
+                  <div class="form-btns">
+                    <button type="submit" class="btn-form-submit comm-btn btn-md bd-radius-5 btn-gray">저장</button>
+                  </div><!-- //form-btns -->
+                </form>
+              </div><!-- //form-create -->
+              <div class="form-view form-detail">
+                <div class="form-detail-head">
+                  <div class="form-name">
+                    <div class="form-filebox">
+                      <img src="../../../assets/img/sub/img_user.png" alt="증명사진">
+                    </div>
+                    <div class="name-inner">
+                      <p>정이름</p>
+                    </div>
+                  </div>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body">
+                  <div class="form-detail-inner">
+                    <div class="form-col">
+                      <div class="lbl">연락처</div>
+                      <p class="form-text">010-1234-1234</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">이메일</div>
+                      <p class="form-text">jeongaraaa@gmail.com</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">생년월일</div>
+                      <p class="form-text">1111-11-11</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">성별</div>
+                      <p class="form-text">남</p>
+                    </div>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-col">
+                      <div class="lbl">지점</div>
+                      <p class="form-text">광장점 1호점</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">직책</div>
+                      <p class="form-text">센터장</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">근무일정</div>
+                      <p class="form-text">평일 주간</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">사용</div>
+                      <p class="form-text">사용중</p>
+                    </div>
+                  </div><!-- //form-detail-inner -->
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+        </div>
+
+        <div class="snackbars"></div><!-- //snackbars -->
+
+        <div class="modal" id="basic-guide">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">삭제</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="modal-desc p2">
+                  삭제 하시겠습니까?
+                </div>
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit" data-modal-submit>확인</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+      </div><!-- //content -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../../assets/js/common.js">/* 공통(레이아웃/스낵바) */</script>
+  <script type="text/javascript" src="../../../assets/js/modal.js">/* 모달창 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/table.js">/* 테이블 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/form.js">/* 폼 영역에 해당 */</script>
+</body>
+
+</html>

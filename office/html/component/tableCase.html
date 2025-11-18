@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" href="../../assets/css/default.min.css">
+  <link rel="apple-touch-icon" href="../img/favicon.ico">
+</head>
+
+<body class="body-component">
+  <!-- wrap -->
+  <div id="wrap" class="wrap-component">
+    <!-- header -->
+    <header id="header">
+      <div class="header-toolbar header-maxWidth">
+        <div class="maxWidth">
+          <h1 class="header-logo">
+            <a href="../index.html" class="logo-main"><img src="../../assets/img/logo/logo.svg" alt="로고"></a>
+          </h1>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container" class="ms-0 px-0">
+      <div class="maxWidth component">
+        <aside id="bside">
+          <nav class="bside-nav fixed">
+            <ul>
+              <li><strong>Component</strong></li>
+              <li><a href="formControl.html">폼 컨트롤</a></li>
+              <li class="is-active"><a href="tableBasic.html">테이블 케이스</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="content">
+          <div class="breadcrumb-head d-flex mb-10">
+            <h6 class="breadcrumb-title">테이블 케이스</h6>
+            <div class="breadcrumb">
+              <a href="index.html" class="home"><i class="ico_home"></i> Component</a>
+              <strong class="position">테이블 케이스</strong>
+            </div><!-- //breadcrumb -->
+          </div>
+          <div class="contents">
+            <p class="p2 text-dark mb-30">// Table Case</p>
+            <div class="table">
+              <div class="grid-text mt-50 mb-10">
+                <a href="#" class="tit mb-0"><strong class="mb-0">* 테이블 상단에 들어가는 영역</strong></a>
+              </div>
+              <div class="table-head">
+                <div class="register-group">
+                  <button type="button" class="btn-registers comm-btn btn-gray bd-radius-3">추가</button>
+                  <ul class="btn__options">
+                    <li class="btn__option btn-register" data-value="지점">지점</li>
+                    <li class="btn__option btn-register" data-value="본사">본사</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="table-head">
+                <a href="javascript:;" class="btn-register comm-btn btn-gray bd-radius-3">추가</a>
+              </div>
+              <div class="table-head">
+                <div class="form-dates">
+                  <button type="button" class="dates__select" aria-expanded="false">
+                    <span class="dates__value">오늘</span>
+                    <i class="ico_select"></i>
+                  </button>
+                  <ul class="dates__options">
+                    <li class="dates__option is-selected" data-value="오늘">오늘</li>
+                    <li class="dates__option" data-value="어제">어제</li>
+                    <li class="dates__option period" data-value="기간선택">기간선택</li>
+                  </ul>
+                  <div class="period-inner" style="display: none;">
+                    <div class="form-datas">
+                      <div class="date-field">
+                        <input type="date" class="int" style="width:140px;">
+                        <button type="button" class="btn-calendar"></button>
+                      </div>
+                      <span>~</span>
+                      <div class="date-field">
+                        <input type="date" class="int" style="width:140px;">
+                        <button type="button" class="btn-calendar"></button>
+                      </div>
+                      <button type="button" class="comm-btn btn-gray bd-radius-4">적용</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-head">
+                <div class="form-dates">
+                  <button type="button" class="dates__select">
+                    <span class="dates__value">10월</span>
+                    <i class="ico_select"></i>
+                  </button>
+                  <ul class="dates__options">
+                    <li class="dates__option" data-value="1월">1월</li>
+                    <li class="dates__option" data-value="2월">2월</li>
+                    <li class="dates__option" data-value="3월">3월</li>
+                    <li class="dates__option" data-value="4월">4월</li>
+                    <li class="dates__option" data-value="5월">5월</li>
+                    <li class="dates__option" data-value="6월">6월</li>
+                    <li class="dates__option" data-value="7월">7월</li>
+                    <li class="dates__option" data-value="8월">8월</li>
+                    <li class="dates__option" data-value="9월">9월</li>
+                    <li class="dates__option is-selected" data-value="10월">10월</li>
+                    <li class="dates__option" data-value="11월">11월</li>
+                    <li class="dates__option" data-value="12월">12월</li>
+                  </ul>
+                  <div class="period-inner" style="display: none;">
+                    <div class="int-date">
+                      <input type="date" class="int" style="width:165px;">
+                      <button type="button" class="comm-btn btn-gray bd-radius-4">적용</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="table-head">
+                <div class="table-head-title"><strong>10</strong>월</div>
+              </div>
+              <div class="table-head">
+                <div class="chk__group">
+                  <label class="chk">
+                    <input type="checkbox" checked=""><span></span> 미확인
+                  </label>
+                  <label class="chk">
+                    <input type="checkbox" checked=""><span></span> 확인
+                  </label>
+                  <label class="chk">
+                    <input type="checkbox"><span></span> 답변완료
+                  </label>
+                </div>
+              </div>
+              <div class="table-head">
+                <a href="javascript:;" class="line-btn btn-gray bd-radius-3"><i class="ico_message"></i>전체전송</a>
+              </div>
+              <br>
+              <div class="grid-text mt-50 mb-10">
+                <a href="#" class="tit mb-0"><strong class="mb-0">* 기본 테이블</strong></a>
+                <p>colgroup > col에는 width 값을 inline으로 적용한다. (주석처리 th 제목과 동일하게 표시)</p>
+              </div>
+              <div class="table-body">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                    <col width="12%"> <!-- 제목 -->
+                    <col width="12%"> <!-- 제목 -->
+                    <col width="*"> <!-- 제목 -->
+                    <col width="24%"> <!-- 제목 -->
+                    <col width="20%"> <!-- 제목 -->
+                    <col width="10%"> <!-- 제목 -->
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>
+                        <div class="th-move">
+                          제목
+                          <div class="modal-move">
+                            <button type="button" class="btn_ico_up"></button> <button type="button"
+                              class="btn_ico_down"></button>
+                          </div>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-move">
+                          제목
+                          <div class="modal-move">
+                            <button type="button" class="btn_ico_up"></button> <button type="button"
+                              class="btn_ico_down"></button>
+                          </div>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-move">
+                          제목
+                          <div class="modal-move">
+                            <button type="button" class="btn_ico_up"></button> <button type="button"
+                              class="btn_ico_down"></button>
+                          </div>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-move">
+                          제목
+                          <div class="modal-move">
+                            <button type="button" class="btn_ico_up"></button> <button type="button"
+                              class="btn_ico_down"></button>
+                          </div>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-move">
+                          제목
+                          <div class="modal-move">
+                            <button type="button" class="btn_ico_up"></button> <button type="button"
+                              class="btn_ico_down"></button>
+                          </div>
+                        </div>
+                      </th>
+                      <th>
+                        <div class="th-move">
+                          제목
+                          <div class="modal-move">
+                            <button type="button" class="btn_ico_up"></button> <button type="button"
+                              class="btn_ico_down"></button>
+                          </div>
+                        </div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="tr-infos">
+                      <td>
+                        <div class="td-photoName">
+                          <img src="../../assets/img/sub/img_user.png" alt="사진">
+                          정이름
+                        </div>
+                      </td>
+                      <td>수신 <i class="i-noti"></i></td>
+                      <td><a href="#" target="_blank" class="text-btn btn-primary">링크가 들어가는 내용</a></td>
+                      <td>
+                        <p class="text-content">내용이 들어갑니다!! 내용이...</p>
+                      </td>
+                      <td>
+                        <p>지각/ 학원관련</p>
+                        <p>관리자 승인 / 학부모 승인</p>
+                        <p>출석 예정 : 11:11</p>
+                      </td>
+                      <td><span class="status-item status-absent">미출석</span></td>
+                    </tr>
+                    <tr>
+                      <td colspan="6">
+                        <div class="table-nopost">
+                          등록된 정보가 없습니다.
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div><!-- //contents -->
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer" class="px-0">
+      <div class="l-maxWidth tac">
+        <address>Copyright ⓒ 2025 Publishing Team by Jeongara. All rights reserved.</address>
+      </div>
+    </footer>
+    <!-- //footer -->
+  </div>
+  <!-- //container -->
+
+
+
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../assets/js/table.js"></script>
+</body>
+
+</html>

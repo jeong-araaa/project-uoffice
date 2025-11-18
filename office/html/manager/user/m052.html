@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.min.css">
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <nav class="header-aside">
+        <h1 class="header-logo">
+          <a href="javascript:;" data-modal-open="modal-branch">본사</a>
+        </h1>
+        <div class="profile-name">
+          <a href="javascript:;">정아라/퍼블리셔</a>
+        </div>
+        <ul class="aside-menu">
+          <li><a href="javascript:;"><span class="menu-text">대시보드</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">출결관리</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">메시지</span></a>
+            <div class="aside-menu-sub">
+              <ul>
+                <li><a href="javascript:;">DM</a></li>
+                <li><a href="javascript:;">전화</a></li>
+                <li><a href="javascript:;">문자</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="javascript:;"><span class="menu-text">순찰일지</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">벌점</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">공지사항</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">도시락</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">인터넷연결</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">요청사항</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">공부시간</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">모의고사</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">출입기록</span></a></li>
+          <li class="on"><a href="javascript:;"><span class="menu-text">회원정보</span></a></li>
+          <li><a href="javascript:;"><span class="menu-text">결제정보</span></a></li>
+        </ul><!-- //aside-menu -->
+      </nav>
+      <div class="header-toolbar">
+        <div class="filter">
+          <form action="">
+            <div class="filter-col">
+              <div class="col-int">
+                <div class="filter-int">
+                  <input type="text" id="keyword-int" class="int" placeholder="검색어를 입력하세요.">
+                </div>
+                <div class="filter-btn">
+                  <button type="button" class="comm-btn icon-btn btn-dark bd-radius-3">
+                    <i class="ico-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div><!-- //filter -->
+        <div class="header-right">
+          <a href="javascript:;" class="header-logout">로그아웃 <span class="ico_out"></span></a>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container">
+      <div class="content l-maxWidth content__list">
+        <div class="table">
+          <div class="table-body">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <colgroup>
+                <col width="14%"> <!-- 이름 -->
+                <col width="*"> <!-- 이메일 -->
+                <col width="8%"> <!-- 승인 -->
+                <col width="13%"> <!-- 연락처 -->
+                <col width="9%"> <!-- 학부모 -->
+                <col width="13%"> <!-- 학부모연락처 -->
+                <col width="17%"> <!-- 회원가입일 -->
+                <col width="8%"> <!-- 사용 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-move">
+                      이름
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      이메일
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      승인
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      연락처
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      학부모
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      학부모연락처
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      회원가입일
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      사용
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="tr-infos">
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>jeongaraaa@mgmail.com</td>
+                  <td>승인</td>
+                  <td>010-1234-1234</td>
+                  <td>김부모</td>
+                  <td>010-1234-1234</td>
+                  <td>YYYY-MM-DD HH:MM</td>
+                  <td>사용중</td>
+                </tr>
+                <tr>
+                  <td colspan="8">
+                    <div class="table-nopost">
+                      등록된 정보가 없습니다.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- //table -->
+
+        <div class="popup-details__inner">
+          <div class="popup-details">
+            <div class="card-head">
+              <div class="card-title">회원정보 상세</div>
+              <div class="card-btns">
+                <button type="button" class="btn-close">닫기</button>
+              </div>
+            </div><!-- //card-head -->
+            <div class="card-body">
+              <div class="form-view form-detail">
+                <div class="form-detail-head">
+                  <div class="form-name">
+                    <div class="form-filebox">
+                      <img src="../../../assets/img/sub/img_user.png" alt="증명사진">
+                    </div>
+                    <div class="name-inner">
+                      <p>정이름</p>
+                      <p class="name-phone">010-1234-1234</p>
+                    </div>
+                  </div>
+                  <div class="form-myinfo">
+                    <button type="button" class="btn-seat" data-modal-open="modal-seat">없음</button><!-- 251014 수정 -->
+                    <div class="btn-inner">
+                      <button type="button" class="btn-messages" data-details-open="popup-messages">문자</button>
+                      <button type="button" class="btn-call" data-details-open="popup-phone">전화</button>
+                      <button type="button" class="btn-chat" data-details-open="popup-messages2">채팅</button>
+                    </div>
+                  </div>
+                </div><!-- //form-detail-head -->
+                <div class="form-detail-body">
+                  <div class="form-detail-inner">
+                    <div class="form-col">
+                      <div class="lbl">이메일</div>
+                      <p class="form-text">jeongaraaa@gmail.com</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">생년월일</div>
+                      <p class="form-text">YYYY-MM-DD</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">성별</div>
+                      <p class="form-text">남</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">회원가입일</div>
+                      <p class="form-text">YYYY-MM-DD HH:MM</p>
+                    </div>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-inner">
+                    <div class="form-col">
+                      <div class="lbl">학부모</div>
+                      <p class="form-text">김부모</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">학부모 연락처</div>
+                      <p class="form-text">010-1234-1234</p>
+                    </div>
+                    <div class="form-col">
+                      <div class="lbl">학부모 이메일</div>
+                      <p class="form-text">abc@gmail.com</p>
+                    </div>
+                  </div><!-- //form-detail-inner -->
+                  <div class="form-detail-last">
+                    <div class="form-row">
+                      <label for="use_onoff" class="lbl">사용</label>
+                      <select id="use_onoff" class="int">
+                        <option value="">선택</option>
+                        <option value="사용중" selected>사용중</option>
+                        <option value="미사용">미사용</option>
+                      </select>
+                      <p class="text-error">
+                        사용여부를 선택해주세요.
+                      </p>
+                    </div>
+                  </div><!-- //form-detail-last -->
+                  <div class="form-toggle">
+                    <button type="button" class="btn-form-toggle">승인</button>
+                  </div>
+                </div><!-- //form-detail-body -->
+              </div><!-- //form-detail -->
+            </div><!-- //card-body -->
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 DM -->
+          <div class="popup-details details-2depth" id="popup-messages">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> DM</div>
+            </div><!-- //card-head -->
+            <ul class="tabmenu-line">
+              <li data-tab="0" class="active"><a href="javascript:;">학생</a></li>
+              <li data-tab="1"><a href="javascript:;">학부모</a></li>
+            </ul>
+            <div class="chat-wrap">
+              <div class="chat-area" data-tab-panel="0">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <p class="chat-date"><span>11.12 목</span></p>
+                  <div class="chat-box no-time chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+              <div class="chat-area" data-tab-panel="1" style="display: none;">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      학부모한테 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+            </div>
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 문자 -->
+          <div class="popup-details details-2depth" id="popup-messages2">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> 문자</div>
+            </div><!-- //card-head -->
+            <ul class="tabmenu-line">
+              <li data-tab="0" class="active"><a href="javascript:;">학생</a></li>
+              <li data-tab="1"><a href="javascript:;">학부모</a></li>
+            </ul>
+            <div class="chat-wrap">
+              <div class="chat-area" data-tab-panel="0">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-to">
+                    <div class="chat-item">
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                      메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다. 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <p class="chat-date"><span>11.12 목</span></p>
+                  <div class="chat-box no-time chat-box-from">
+                    <div class="chat-item">
+                      메시지를.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                  <div class="chat-box chat-box-from">
+                    <div class="chat-item">
+                      보내봅미다아
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+              <div class="chat-area" data-tab-panel="1" style="display: none;">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="chat-box no-time chat-box-to">
+                    <div class="chat-item">
+                      학부모한테 메시지를 보냅니다.
+                    </div>
+                    <span class="chat-time">오전 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <textarea name="" id="" class="chat-textarea"></textarea>
+                  <button type="button" class="chat-send">전송</button>
+                </div>
+              </div><!-- //chat-area -->
+            </div>
+          </div><!-- //popup-details -->
+
+          <!-- 상세팝업 전화 -->
+          <div class="popup-details details-2depth" id="popup-phone">
+            <div class="card-head">
+              <div class="card-title"><button type="button" class="btn-back">뒤로</button> 통화</div>
+            </div><!-- //card-head -->
+            <ul class="tabmenu-line">
+              <li data-tab="0" class="active"><a href="javascript:;">학생</a></li>
+              <li data-tab="1"><a href="javascript:;">학부모</a></li>
+            </ul>
+            <div class="chat-wrap">
+              <div class="chat-area" data-tab-panel="0">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="phone-box">
+                    <span class="phone-date">시작 11:11</span>
+                    <div class="phone-item">
+                      <p class="item-1">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                      <p class="item-2">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                    </div>
+                    <span class="phone-date">종료 11:11</span>
+                  </div><!-- //chat-box -->
+                  <p class="chat-date"><span>11.11 수</span></p>
+                  <div class="phone-box">
+                    <span class="phone-date">시작 11:11</span>
+                    <div class="phone-item">
+                      <p class="item-1">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                      <p class="item-2">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                    </div>
+                    <span class="phone-date">종료 11:11</span>
+                  </div><!-- //chat-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <button type="button" class="btn-call" data-modal-open="modal-call">전화걸기</button>
+                </div>
+              </div>
+              <div class="chat-area" data-tab-panel="1" style="display: none;">
+                <div class="chat-inner">
+                  <p class="chat-date"><span>11.14 수</span></p>
+                  <div class="phone-box">
+                    <span class="phone-date">시작 11:11</span>
+                    <div class="phone-item">
+                      <p class="item-1">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이
+                        들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                      <p class="item-2">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. 내용이 들어갑니다. </p>
+                    </div>
+                    <span class="phone-date">종료 11:11</span>
+                  </div><!-- //phone-box -->
+                </div><!-- //chat-inner -->
+                <div class="chat-form">
+                  <button type="button" class="btn-call" data-modal-open="modal-call">전화걸기</button>
+                </div>
+              </div>
+            </div><!-- //chat-wrap -->
+          </div><!-- //popup-details -->
+        </div><!-- //popup-details__inner -->
+
+        <div class="snackbars"></div><!-- //snackbars -->
+
+        <div class="modal" id="basic-guide">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">삭제</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="modal-desc p2">
+                  삭제 하시겠습니까?
+                </div>
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit" data-modal-submit>확인</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+
+        <!-- 251014 추가 -->
+        <div class="modal" id="modal-seat">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">좌석 번호 지정</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="form-col">
+                  <p class="form-text gap-20"><span>정이름</span> 010-1234-1234</p>
+                </div>
+                <div class="form-col">
+                  <select id="demerit_select" class="int">
+                    <option value="001">001</option>
+                    <option value="002">002</option>
+                    <option value="003">003</option>
+                    <option value="004">004</option>
+                    <option value="005">005</option>
+                  </select>
+                </div><!-- //form-col -->
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit" data-modal-submit>저장</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+        <!-- //251014 추가 -->
+      </div><!-- //content -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../../assets/js/common.js">/* 공통(레이아웃/스낵바) */</script>
+  <script type="text/javascript" src="../../../assets/js/modal.js">/* 모달창 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/table.js">/* 테이블 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/form.js">/* 폼 영역에 해당 */</script>
+</body>
+
+</html>

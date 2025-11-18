@@ -1,0 +1,37 @@
+/** 
+  Bang So Jung SCSS
+  http://jeongara.com/
+**/
+/*
+
+  기본 공통 SCSS
+
+*/
+@import "fonts.scss";
+@import "reset.scss";
+
+:root {
+  --primary-color: #0a42e1;
+  --primary-color-hover: #0a42e1;
+  --success-color: #2459ac;
+  --success-color-hover: #0441a0;
+  --secondary-color: #DDD;
+  --secondary-color-hover: #CCC;
+  --danger-color: #e95151;
+  --danger-color-hover: #c64040;
+  --dark-color: #333;
+  --gray-color: #595C65;
+  --gray2-color: #999;
+  --white-color: #FFF;
+  --white-color-hover: #F0F0F0;
+  --black-color: #000;
+}
+
+// *** 레이아웃 ***
+@import "layout.scss";
+
+// *** 컴포넌트 ***
+@import "component.scss";
+
+// *** 컨텐츠 ***
+@import "contents.scss";

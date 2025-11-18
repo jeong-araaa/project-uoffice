@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.min.css">
+</head>
+
+<body>
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header id="header">
+      <nav class="header-aside">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </nav>
+      <div class="header-toolbar">
+        <a href="../index.html" class="txt-guide">레이아웃은 <br>"index.html" 참조</a>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container">
+      <div class="content l-maxWidth content__list">
+        <div class="table">
+          <div class="table-head">
+            <div class="form-dates">
+              <button type="button" class="dates__select">
+                <span class="dates__value">오늘</span>
+                <i class="ico_select"></i>
+              </button>
+              <!-- 251016 수정 -->
+              <ul class="dates__options">
+                <li class="dates__option is-selected" data-value="오늘">오늘</li>
+                <li class="dates__option" data-value="어제">어제</li>
+                <li class="dates__option period" data-value="기간선택">기간선택</li>
+              </ul>
+              <div class="period-inner" style="display: none;">
+                <div class="form-datas">
+                  <div class="date-field">
+                    <input type="date" class="int" style="width:140px;">
+                    <button type="button" class="btn-calendar"></button>
+                  </div>
+                  <span>~</span>
+                  <div class="date-field">
+                    <input type="date" class="int" style="width:140px;">
+                    <button type="button" class="btn-calendar"></button>
+                  </div>
+                  <button type="button" class="comm-btn btn-gray bd-radius-4">적용</button>
+                </div>
+              </div>
+              <!-- //251016 수정 -->
+            </div>
+          </div>
+          <div class="table-body">
+            <table border="0" cellspacing="0" cellpadding="0">
+              <colgroup>
+                <col width="14%"> <!-- 이름 -->
+                <col width="10%"> <!-- 좌석번호 -->
+                <col width="*%"> <!-- 순찰결과 -->
+                <col width="15%"> <!-- 벌점반영 -->
+                <col width="12%"> <!-- 순찰교시 -->
+                <col width="20%"> <!-- 순찰일시 -->
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>
+                    <div class="th-move">
+                      이름
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      좌석번호
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      순찰결과
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      벌점반영
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      순찰교시
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                  <th>
+                    <div class="th-move">
+                      순찰일시
+                      <div class="modal-move">
+                        <button type="button" class="btn_ico_up"></button> <button type="button"
+                          class="btn_ico_down"></button>
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>1</td>
+                  <td>졸음</td>
+                  <td>졸음 - 1점</td>
+                  <td>1교시 - 1</td>
+                  <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>10</td>
+                  <td>휴대폰 사용</td>
+                  <td>휴대폰 사용 - 1점</td>
+                  <td>1교시 - 1</td>
+                  <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>20</td>
+                  <td>학습 외 사이트 접속</td>
+                  <td>학습 외 사이트 접속 - 1점</td>
+                  <td>1교시 - 1</td>
+                  <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>55</td>
+                  <td>기타</td>
+                  <td>기타 - 1점</td>
+                  <td>1교시 - 1</td>
+                  <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-photoName">
+                      <img src="../../../assets/img/sub/img_user.png" alt="사진">
+                      정이름
+                    </div>
+                  </td>
+                  <td>33</td>
+                  <td>학습 분위기 저해</td>
+                  <td>학습 분위기 저해 - 1점</td>
+                  <td>1교시 - 1</td>
+                  <td>YYYY-MM-DD HH:MM:SS</td>
+                </tr>
+                <tr>
+                  <td colspan="6">
+                    <div class="table-nopost">
+                      등록된 정보가 없습니다.
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div><!-- //table -->
+
+        <div class="snackbars"></div><!-- //snackbars -->
+
+        <div class="modal" id="basic-guide">
+          <div class="modal-wrap wrap-top">
+            <div class="dim" data-modal-close></div>
+            <div class="modal-area" style="width:395px;">
+              <div class="modal-head justify-content-between">
+                <div class="modal-title">삭제</div>
+                <button type="button" class="btn-close" data-modal-close>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                      fill="#666" />
+                  </svg>
+                </button>
+              </div><!-- //modal-head -->
+              <div class="modal-body">
+                <div class="modal-desc p2">
+                  삭제 하시겠습니까?
+                </div>
+              </div><!-- //modal-body -->
+              <div class="modal-foot justify-content-end pt-0">
+                <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
+                <a href="#" class="modal-btn-submit" data-modal-submit>확인</a>
+              </div><!-- //modal-foot -->
+            </div>
+          </div><!-- //modal-wrap -->
+        </div><!-- //modal -->
+      </div><!-- //content -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../../assets/js/common.js">/* 공통(레이아웃/스낵바) */</script>
+  <script type="text/javascript" src="../../../assets/js/modal.js">/* 모달창 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/table.js">/* 테이블 영역에 해당 */</script>
+  <script type="text/javascript" src="../../../assets/js/form.js">/* 폼 영역에 해당 */</script>
+</body>
+
+</html>

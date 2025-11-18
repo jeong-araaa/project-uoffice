@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes" />
+  <meta name="title" content="" />
+  <meta name="author" content="" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="image" content="" />
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <title>BO 기본 템플릿</title>
+  <link rel="stylesheet" href="../../assets/css/default.min.css">
+  <link rel="apple-touch-icon" href="../img/favicon.ico">
+</head>
+
+<body class="body-component">
+  <!-- wrap -->
+  <div id="wrap" class="wrap-component">
+    <!-- header -->
+    <header id="header">
+      <div class="header-toolbar header-maxWidth">
+        <div class="maxWidth">
+          <h1 class="header-logo">
+            <a href="../index.html" class="logo-main"><img src="../../assets/img/logo/logo.svg" alt="로고"></a>
+          </h1>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <!-- container -->
+    <div id="container" class="ms-0 px-0">
+      <div class="maxWidth component">
+        <aside id="bside">
+          <nav class="bside-nav fixed">
+            <ul>
+              <li><strong>Component</strong></li>
+              <li class="is-active"><a href="formControl.html">폼 컨트롤</a></li>
+              <li><a href="tableCase.html">테이블 케이스</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="content">
+          <div class="breadcrumb-head d-flex mb-10">
+            <h6 class="breadcrumb-title">폼 컨트롤</h6>
+            <div class="breadcrumb">
+              <a href="index.html" class="home"><i class="ico_home"></i> Component</a>
+              <strong class="position">폼 컨트롤</strong>
+            </div><!-- //breadcrumb -->
+          </div>
+          <div class="contents">
+            <p class="p2 text-dark mb-30">// Form Control</p>
+            <div class="grid-text mb-30">
+              <p class="tit"><strong>* 참고사항</strong></p>
+              <p>각 label for=""값과 input id=""값을 꼭 맞춰서 작업해주세요.</p>
+              <!-- <p>필수 입력값 label 코드에 <span class="required"><span>필수입력</span></span> 추가</p> -->
+            </div>
+            <div class="card">
+              <div class="card-head">
+                <h6 class="card-title">예시</h6>
+              </div><!-- //card-head -->
+              <div class="card-body">
+                <section class="d-grid column-2 gap-30 flex-wrap">
+                  <article class="inner">
+                    <div class="inner-head">
+                      <h6 class="p2">Row</h6>
+                    </div>
+                    <div class="inner-body">
+                      <form action="">
+                        <div class="form-filebox">
+                          <div class="int-fileimg">
+                            <img src="../../assets/img/sub/img_user.png" alt="증명사진">
+                            <!-- 선택사항: 초기엔 숨겨짐 -->
+                            <button type="button" class="btn-file-remove" aria-label="첨부파일 삭제"
+                              style="display:none;"></button>
+                          </div>
+                          <!-- <p class="int-message">
+                          * 80px x 80px / .jpg 권장
+                          </p> -->
+                          <input type="file" accept="image/*" class="upload-hidden" style="display: none;">
+                        </div>
+                        <div class="form-row">
+                          <label for="f_name" class="lbl">이름</label>
+                          <input type="text" id="f_name" class="int" placeholder="이름" required>
+                          <p class="text-error">
+                            이름을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_phone" class="lbl">연락처</label>
+                          <input type="text" id="f_phone" class="int js-phone" inputmode="numeric" maxlength="13"
+                            placeholder="010-1234-1234" required>
+                          <p class="text-error">
+                            연락처를 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_email" class="lbl">이메일</label>
+                          <input type="email" id="f_email" class="int" placeholder="abc@abc.com" required>
+                          <p class="text-error">
+                            이메일을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_birth" class="lbl">생년월일</label>
+                          <input type="text" id="f_birth" class="int js-birth" inputmode="numeric" maxlength="10"
+                            placeholder="YYYY-MM-DD" required>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_gender" class="lbl">성별</label>
+                          <select id="f_gender" class="int" required>
+                            <option value="">선택</option>
+                            <option value="남자">남자</option>
+                            <option value="여자">여자</option>
+                          </select>
+                          <p class="text-error">
+                            성별을 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_branch" class="lbl">지점</label>
+                          <input type="text" id="f_branch" class="int" placeholder="지점" required>
+                          <p class="text-error">
+                            지점을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_position" class="lbl">직책</label>
+                          <select id="f_position" class="int" required>
+                            <option value="">선택</option>
+                            <option value="매니저">매니저</option>
+                            <option value="센터장">센터장</option>
+                          </select>
+                          <p class="text-error">
+                            지점을 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_workSch" class="lbl">근무일정</label>
+                          <select id="f_workSch" class="int" required>
+                            <option value="">선택</option>
+                            <option value="평 일주간">평일 주간</option>
+                            <option value="평일 야간">평일 야간</option>
+                          </select>
+                          <p class="text-error">
+                            근무일정을 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_usage" class="lbl">사용</label>
+                          <select id="f_usage" class="int" required>
+                            <option value="">선택</option>
+                            <option value="active">사용중</option>
+                            <option value="inactive">미사용</option>
+                          </select>
+                          <p class="text-error">
+                            사용여부를 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_branch_name" class="lbl">지점명</label>
+                          <input type="text" id="f_branch_name" class="int" placeholder="지점명" required>
+                          <p class="text-error">
+                            지점명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_branch_address" class="lbl">지점주소</label>
+                          <textarea name="" id="f_branch_address" class="int int-textarea"
+                            style="max-height:100%;height:80px;" required></textarea>
+                          <p class="text-error">
+                            지점주소를 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_branch_rep" class="lbl">센터장</label>
+                          <input type="text" id="f_branch_rep" class="int" placeholder="센터장" required>
+                          <p class="text-error">
+                            센터장을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_wd_day_mgr" class="lbl">평일 주간 매니저</label>
+                          <input type="text" id="f_wd_day_mgr" class="int" placeholder="평일 주간 매니저" required>
+                          <p class="text-error">
+                            평일 주간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_wd_night_mgr" class="lbl">평일 야간 매니저</label>
+                          <input type="text" id="f_wd_night_mgr" class="int" placeholder="평일 야간 매니저" required>
+                          <p class="text-error">
+                            평일 야간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_we_day_mgr" class="lbl">주말 주간 매니저</label>
+                          <input type="text" id="f_we_day_mgr" class="int" placeholder="주말 주간 매니저" required>
+                          <p class="text-error">
+                            주말 주간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_we_night_mgr" class="lbl">주말 야간 매니저</label>
+                          <input type="text" id="f_we_night_mgr" class="int" placeholder="주말 야간 매니저" required>
+                          <p class="text-error">
+                            주말 야간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_branch_phone" class="lbl">지점연락처</label>
+                          <input type="text" id="f_branch_phone" class="int js-phone" inputmode="numeric" maxlength="13"
+                            placeholder="010-1234-1234" required>
+                          <p class="text-error">
+                            지점연락처를 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row">
+                          <label for="f_title" class="lbl">제목</label>
+                          <textarea name="" id="f_title" class="int int-title" placeholder="공지사항 제목"
+                            required=""></textarea>
+                          <p class="text-error">
+                            제목을 입력해주세요.
+                          </p>
+                        </div>
+                        <div class="form-row">
+                          <label class="lbl">내용</label>
+                          <div class="form-editor" style="height:400px">
+                            오픈에디터사용
+                          </div>
+                          <p class="text-error">
+                            내용을 입력해주세요.
+                          </p>
+                        </div>
+                        <div class="form-row">
+                          <input type="date" class="int">
+                        </div>
+                        <div class="form-btns">
+                          <button type="submit" class="btn-form-submit comm-btn btn-md bd-radius-5 btn-gray disabled"
+                            disabled="">저장</button>
+                        </div>
+                      </form>
+                    </div><!-- //inner-body -->
+                  </article><!-- //inner -->
+                  <article class="inner">
+                    <div class="inner-head">
+                      <h6 class="p2">Error Row</h6>
+                    </div>
+                    <div class="inner-body">
+                      <form action="">
+                        <div class="form-filebox int-error">
+                          <div class="int-fileimg">
+                            <img src="../../assets/img/sub/img_user.png" alt="증명사진">
+                            <!-- 선택사항: 초기엔 숨겨짐 -->
+                            <button type="button" class="btn-file-remove" aria-label="첨부파일 삭제"
+                              style="display:none;"></button>
+                          </div>
+                          <!-- <p class="int-message">
+                          * 80px x 80px / .jpg 권장
+                          </p> -->
+                          <input type="file" accept="image/*" class="upload-hidden" style="display: none;">
+                        </div>
+                        <div class="form-row int-error">
+                          <label for="f_name" class="lbl">이름</label>
+                          <input type="text" id="f_name" class="int" placeholder="이름" required>
+                          <p class="text-error">
+                            이름을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_phone" class="lbl">연락처</label>
+                          <input type="text" id="f_phone" class="int js-phone" inputmode="numeric" maxlength="13"
+                            placeholder="010-1234-1234" required>
+                          <p class="text-error">
+                            연락처를 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_email" class="lbl">이메일</label>
+                          <input type="email" id="f_email" class="int" placeholder="abc@abc.com" required>
+                          <p class="text-error">
+                            이메일을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_birth" class="lbl">생년월일</label>
+                          <input type="text" id="f_birth" class="int js-birth" inputmode="numeric" maxlength="10"
+                            placeholder="YYYY-MM-DD" required>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_gender" class="lbl">성별</label>
+                          <select id="f_gender" class="int" required>
+                            <option value="">선택</option>
+                            <option value="남자">남자</option>
+                            <option value="여자">여자</option>
+                          </select>
+                          <p class="text-error">
+                            성별을 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_branch" class="lbl">지점</label>
+                          <input type="text" id="f_branch" class="int" placeholder="지점" required>
+                          <p class="text-error">
+                            지점을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_position" class="lbl">직책</label>
+                          <select id="f_position" class="int" required>
+                            <option value="">선택</option>
+                            <option value="매니저">매니저</option>
+                            <option value="센터장">센터장</option>
+                          </select>
+                          <p class="text-error">
+                            지점을 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_workSch" class="lbl">근무일정</label>
+                          <select id="f_workSch" class="int" required>
+                            <option value="">선택</option>
+                            <option value="평 일주간">평일 주간</option>
+                            <option value="평일 야간">평일 야간</option>
+                          </select>
+                          <p class="text-error">
+                            근무일정을 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_usage" class="lbl">사용</label>
+                          <select id="f_usage" class="int" required>
+                            <option value="">선택</option>
+                            <option value="active">사용중</option>
+                            <option value="inactive">미사용</option>
+                          </select>
+                          <p class="text-error">
+                            사용여부를 선택해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_branch_name" class="lbl">지점명</label>
+                          <input type="text" id="f_branch_name" class="int" placeholder="지점명" required>
+                          <p class="text-error">
+                            지점명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_branch_address" class="lbl">지점주소</label>
+                          <textarea name="" id="f_branch_address" class="int int-textarea"
+                            style="max-height:100%;height:80px;" required></textarea>
+                          <p class="text-error">
+                            지점주소를 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_branch_rep" class="lbl">센터장</label>
+                          <input type="text" id="f_branch_rep" class="int" placeholder="센터장" required>
+                          <p class="text-error">
+                            센터장을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_wd_day_mgr" class="lbl">평일 주간 매니저</label>
+                          <input type="text" id="f_wd_day_mgr" class="int" placeholder="평일 주간 매니저" required>
+                          <p class="text-error">
+                            평일 주간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_wd_night_mgr" class="lbl">평일 야간 매니저</label>
+                          <input type="text" id="f_wd_night_mgr" class="int" placeholder="평일 야간 매니저" required>
+                          <p class="text-error">
+                            평일 야간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_we_day_mgr" class="lbl">주말 주간 매니저</label>
+                          <input type="text" id="f_we_day_mgr" class="int" placeholder="주말 주간 매니저" required>
+                          <p class="text-error">
+                            주말 주간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_we_night_mgr" class="lbl">주말 야간 매니저</label>
+                          <input type="text" id="f_we_night_mgr" class="int" placeholder="주말 야간 매니저" required>
+                          <p class="text-error">
+                            주말 야간 매니저명을 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_branch_phone" class="lbl">지점연락처</label>
+                          <input type="text" id="f_branch_phone" class="int js-phone" inputmode="numeric" maxlength="13"
+                            placeholder="010-1234-1234" required>
+                          <p class="text-error">
+                            지점연락처를 입력해주세요.
+                          </p>
+                        </div><!-- //form-row -->
+                        <div class="form-row int-error">
+                          <label for="f_title" class="lbl">제목</label>
+                          <textarea name="" id="f_title" class="int int-title" placeholder="공지사항 제목"
+                            required=""></textarea>
+                          <p class="text-error">
+                            제목을 입력해주세요.
+                          </p>
+                        </div>
+                        <div class="form-row int-error">
+                          <label class="lbl">내용</label>
+                          <div class="form-editor" style="height:400px">
+                            오픈에디터사용
+                          </div>
+                          <p class="text-error">
+                            내용을 입력해주세요.
+                          </p>
+                        </div>
+                        <div class="form-row int-error">
+                          <input type="date" class="int">
+                        </div>
+                        <div class="form-btns">
+                          <button type="submit" class="btn-form-submit comm-btn btn-md bd-radius-5 btn-gray disabled"
+                            disabled="">저장</button>
+                        </div>
+                      </form>
+                    </div><!-- //inner-body -->
+                  </article><!-- //inner -->
+                </section>
+              </div><!-- //card-body -->
+            </div><!-- //card -->
+          </div><!-- //contents -->
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer id="footer" class="px-0">
+      <div class="l-maxWidth tac">
+        <address>Copyright ⓒ 2025 Publishing Team by Jeongara. All rights reserved.</address>
+      </div>
+    </footer>
+    <!-- //footer -->
+  </div>
+  <!-- //container -->
+
+
+
+  </div>
+  <!-- //wrap -->
+  <script type="text/javascript" src="../../assets/js/form.js"></script>
+</body>
+
+</html>
