@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=768, initial-scale=1.0" />
+  <title>유매니저 web 1.6.1</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Noto Sans KR", "Malgun Gothic", "AppleSDGothicNeo", "AppleGothic", sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #62697b;
+      letter-spacing: -0.2992px;
+      box-sizing: border-box;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    table,
+    tr,
+    td,
+    th {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 1440px;
+      height: 100px;
+      margin: 0 auto;
+      background-color: #fff;
+      z-index: 100;
+    }
+
+    .header h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 25px;
+      letter-spacing: 0px;
+      color: #000;
+    }
+
+    .header h1 img {
+      height: 60px;
+    }
+
+    .header .link {
+      position: absolute;
+      bottom: 5px;
+      right: 5%;
+    }
+
+    .header .link a {
+      font-size: 16px;
+      color: #fff;
+      margin-left: 10px;
+    }
+
+    .date {
+      position: absolute;
+      right: 0px;
+      top: 8px;
+      width: 350px;
+      padding: 5px 10px;
+      font-size: 12px !important;
+      color: #2a2a2a;
+      background-color: #eaeaea;
+      border-radius: 5px;
+    }
+
+    .date .modify {
+      font-size: 12px !important;
+    }
+
+    .word_list {
+      position: absolute !important;
+      right: 20px;
+      bottom: 32px;
+      background-color: #fff;
+      display: inline-block;
+    }
+
+    .word_list p {
+      padding: 0 5px;
+      font-size: 11px;
+    }
+
+    .tableWrap {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-top: 100px;
+      padding-bottom: 50px;
+    }
+
+    .tableTh {
+      position: fixed;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      background-color: #fff;
+      z-index: 50;
+    }
+
+    .tableTd {
+      margin-top: 32px;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    tr:hover {
+      background-color: #fdd bba;
+    }
+
+    th {
+      padding: 7px 10px;
+      background-color: #0a42e1;
+      color: #fff;
+      font-weight: normal;
+      word-wrap: break-word;
+    }
+
+    th span {
+      color: #f2fff9;
+    }
+
+    td {
+      padding: 5px 10px;
+      border: 1px solid #f5f5f5;
+      text-align: center;
+      color: #999;
+      word-wrap: break-word;
+    }
+
+    td:nth-child(5),
+    td:nth-child(6) {
+      text-align: left;
+      padding: 5px 10px;
+    }
+
+    td a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 3px 0px;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    td a strong.txt {
+      display: inline-block;
+      margin-right: 5px;
+      padding: 0px 5px;
+      background-color: #0f8340;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 12px;
+      color: #FFF;
+    }
+
+    td a strong.txt.txtko {
+      background-color: #f3c920;
+      color: #2a2a2a;
+    }
+
+    td a span {
+      color: #c0c0c0;
+      margin-left: 3px
+    }
+
+    .tr_new {
+      background-color: #fff0f0 !important;
+    }
+
+    .tr_off {
+      background-color: #f5f5f5 !important;
+    }
+
+    .tr_off td .done li::before {
+      background-color: #FFF;
+    }
+
+    .tr_off td .done *,
+    .tr_off td strong,
+    .tr_off td a,
+    .tr_off td {
+      color: #FFF !important;
+    }
+
+    .reference {
+      color: #1E1E1E;
+    }
+
+    .modify {
+      color: #FF0004 !important;
+      font-size: 14px !important;
+    }
+
+    .modify::before {
+      background-color: #FF0004;
+    }
+
+    .new {
+      color: red;
+    }
+
+    .today {
+      color: #0a42e1;
+    }
+
+    .line_bot th,
+    .line_bot td {
+      border-bottom-color: #ddd;
+    }
+
+    .depth0 {
+      font-weight: 600;
+      font-size: 15px;
+      color: #000;
+      text-align: left;
+      background-color: transparent;
+      padding-left: 25px;
+      letter-spacing: 0;
+    }
+
+    .depth1 {
+      font-weight: 600;
+      color: #000;
+    }
+
+    td:nth-child(2) {
+      font-weight: 400;
+      color: #004998;
+    }
+
+    td:nth-child(3) {
+      font-weight: 400;
+      color: #037bff;
+    }
+
+    .goTop {
+      display: block;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 10px 0;
+      text-align: center;
+      color: #000;
+      background-color: #EDEDED;
+    }
+
+    .tr.off,
+    p.off {
+      background-color: #B1B3B9;
+      color: #7B7D86;
+    }
+
+    .done {
+      padding: 5px 0px;
+    }
+
+    .done {
+      padding: 10px 0px;
+      border-top: 1px dotted #bbb;
+    }
+
+    .done>li {
+      position: relative;
+      padding-left: 8px;
+      margin-bottom: 6px;
+      line-height: 1.1;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    .done>li::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 3px;
+      height: 3px;
+      border-radius: 100%;
+      background-color: #aaa;
+    }
+
+    .done>li:last-child {
+      margin-bottom: 0;
+    }
+
+    .done ol {
+      list-style-type: decimal;
+      margin-top: 5px;
+      margin-left: 15px;
+    }
+
+    .done .modify ol>li {
+      color: #FF0004 !important;
+    }
+
+    .done .modify::before {
+      background-color: #FF0004 !important;
+    }
+
+    .done:first-child {
+      border-top: none;
+    }
+
+    .blind {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      clip: rect(0, 0, 0, 0);
+      overflow: hidden;
+    }
+
+    .tabmenu {
+      display: flex;
+      align-content: center;
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      list-style: none;
+    }
+
+    .tabmenu>li {
+      margin-left: -1px
+    }
+
+    .tabmenu>li:first-child {
+      margin-left: 0px !important
+    }
+
+    .tabmenu>li>a {
+      display: flex;
+      align-items: center;
+      height: 35px;
+      padding: 0 15px;
+      background-color: #FFF;
+      border: 1px solid #ddd;
+      border-bottom: none !important;
+      border-radius: 8px 8px 0px 0px;
+      font-size: 15px;
+      color: #000;
+      text-decoration: inherit;
+    }
+
+    .tabmenu>li.active {
+      position: relative
+    }
+
+    .tabmenu>li.active>a {
+      background-color: #037bff;
+      border-color: #037bff;
+      color: #FFF
+    }
+
+    .tabmenu-con {
+      display: none;
+    }
+
+    .tabmenu-con.active {
+      display: block;
+    }
+
+    .btnAdmin {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 3px 10px;
+      background-color: #037bff;
+      border-radius: 3px;
+      font-size: 14px;
+      color: #FFF;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body id="top">
+  <div class="header">
+    <h1>
+      유매니저 web 1.6.1
+    </h1>
+    <a class="btnAdmin" href="coding_list.html">사용자화면</a>
+    <div class="date">
+      <!-- 250912 퍼블리싱 1차 산출물 전달.v.1.0.0<br>
+      250915 퍼블리싱 1차 산출물 수정본 전달.v.1.0.1<br>
+      250916 퍼블리싱 수정본 전달.v.1.0.2<br> -->
+      <!-- 250918 퍼블리싱 최종본 전달.v.2.0.0<br> -->
+      <!-- 250922 퍼블리싱 최종본 전달.v.2.0.1<br> -->
+      <!-- 250922 퍼블리싱 개발수정요청본 전달.v.2.0.2<br> -->
+      <!-- 250924 퍼블리싱 1차 피드백 반영 산출물.v.2.0.3<br> -->
+      <!-- 250929 기획서 1.5버전 업데이트 퍼블리싱 산출물.v.2.1.0<br> -->
+      <!-- 251011 퍼블리싱 수정요청 산출물.v.2.1.1<br> -->
+      <!-- 51012 기획서 1.6.1버전 업데이트 및 수정요청.v.2.2.0<br> -->
+      251014 기획서 1.6.1버전 수정요청.v.2.2.1<br>
+      251016 기획서 1.6.1버전 누락사항 수정요청.v.2.2.2<br>
+      251017 기획서 1.6.1버전 누락사항 수정요청.v.2.2.3<br>
+      <span class="modify">251020 기획서 1.6.1버전 누락사항 수정요청.v.2.2.4</span>
+    </div>
+  </div>
+
+
+  <div class="tableWrap">
+    <table class="tableTh">
+      <colgroup>
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="30%" />
+        <col width="*" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>1depth</th>
+          <th>2depth</th>
+          <th>3depth</th>
+          <th>4depth</th>
+          <th>디렉토리/파일명</th>
+          <th><span>퍼블리셔 코멘트</span></th>
+        </tr>
+      </thead>
+    </table>
+
+    <table class="tableTd">
+      <colgroup>
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="10%" />
+        <col width="30%" />
+        <col width="*" />
+      </colgroup>
+      <tbody>
+        <tr class="line_bot">
+          <td colspan="6">
+            <ul class="done">
+              <li>style은 sass로 작업</li>
+              <li>scss로 작업</li>
+              <!-- <li>v.1.0.0 퍼블리싱 1차 최종산출물 전달 (250912)</li>
+              <li>v.1.0.1 퍼블리싱 1차 산출물 수정본 전달_1 (250915)</li>
+              <li>v.1.0.2 퍼블리싱 1차 산출물 수정본 전달_2 (250916)</li>
+              <li>v.2.0.0 퍼블리싱 2차 최종산출물 전달 (250918)</li>
+              <li>v.2.0.1 퍼블리싱 2차 산출물 수정본 전달_1 (250922)</li>
+              <li>v.2.0.2 퍼블리싱 2차 산출물 수정본 전달_2 (250922)</li>
+              <li>v.2.0.3 퍼블리싱 1차 피드백 반영 산출물 (250924)<br>전체페이지 테이블 td 태그에 class="tac"(가운데정렬) 클래스 제거 / 상세 레이어팝업 영역 "popup-details__inner" div 태그로 한번 더 감싸서 적용 form.js 수정 </li>
+              <li>v.2.1.0 기획서 1.5버전 업데이트 퍼블리싱 산출물 (250929)</li>
+              <li>v.2.1.1 퍼블리싱 수정사항 반영 (251011)</li>
+              <li>v.2.2.0 기획서 1.6버전 업데이트 퍼블리싱 반영 (251011)</li> -->
+              <li>v.2.2.0 기획서 1.6.1버전 업데이트 및 수정요청 퍼블리싱 반영 (251012)</li>
+              <li>v.2.2.1 기획서1.6.1버전 상이 수정요청 퍼블리싱 반영 - 수정 html 파일내에서 251014 주석처리 (251014)</li>
+              <li>v.2.2.2 기획서1.6.1버전 누락사항 수정요청 퍼블리싱 반영 - html 파일내에서 251016 주석처리 (251016)</li>
+              <li>v.2.2.3 기획서1.6.1버전 누락사항 수정요청 퍼블리싱 반영 - html 파일내에서 251017 주석처리 (251017)</li>
+              <li class="modify">v.2.2.4 기획서1.6.1버전 누락사항 수정요청 퍼블리싱 반영 - html 파일내에서 251020 주석처리 (251020)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="line_bot">
+          <td class="depth1">로그인</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/login/m001.html" target="_blank">office/html/login/<strong>m001.html</strong></a>
+          </td>
+          <td>
+            <ul class="done">
+              <li>v.2.1.0 - 구글 로그인 버튼 → 퍼블적용</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1">공통 가이드</td>
+          <td>유마스터</td>
+          <td>레이아웃</td>
+          <td></td>
+          <td><a href="./office/html/master/index.html"
+              target="_blank">office/html/master/<strong>index.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                header / footer 영역 최종반영
+              </li>
+              <li>
+                로고클릭 → 지점선택 모달창 퍼블적용
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>유매니저</td>
+          <td>레이아웃</td>
+          <td></td>
+          <td><a href="./office/html/manager/index.html"
+              target="_blank">office/html/manager/<strong>index.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                header / footer 영역 최종반영
+              </li>
+              <li>
+                로고클릭 → 지점선택 모달창 퍼블적용
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>includes</td>
+          <td>head</td>
+          <td></td>
+          <td><a href="./office/html/includes/head.html"
+              target="_blank">office/html/includes/<strong>head.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                html 기본구조
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td></td>
+          <td>header</td>
+          <td></td>
+          <td><a href="./office/html/includes/header.html"
+              target="_blank">office/html/includes/<strong>header.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                header 영역
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>컴포넌트</td>
+          <td>폼 컨트롤</td>
+          <td></td>
+          <td><a href="./office/html/component/formControl.html"
+              target="_blank">office/html/component/<strong>formControl.html</strong></a></td>
+          <td>
+          </td>
+        </tr>
+        <tr class="line_bot">
+          <td class="depth1"></td>
+          <td></td>
+          <td>테이블 케이스</td>
+          <td></td>
+          <td><a href="./office/html/component/tableCase.html"
+              target="_blank">office/html/component/<strong>tableCase.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>251016 기간선택, 월선택 html 79~134 line 수정&추가</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1">유마스터</td>
+          <td>매니저</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/master/mgr/m004.html"
+              target="_blank">office/html/master/mgr/<strong>m004.html</strong></a>
+          </td>
+          <td>
+            <ul class="done">
+              <li>
+                상세&추가(팝업) → 퍼블적용
+              </li>
+              <li>
+                삭제확인(모달창) → 퍼블적용
+              </li>
+              <li>v.2.1.0
+                <ol>
+                  <li>'추가'버튼 마우스 오버 시 옵션메뉴(지점/본사) 노출 → 퍼블적용</li>
+                  <li>옵션메뉴(지점/본사) 클릭 시 폼화면 상단 타이틀(지점/본사) 노출 → 퍼블적용 </li>
+                  <li>폼 : 지점/본사 필드값 구분, 상세화면 : 상단 타이틀(지점/본사) 노출 → 개발쪽에서 적용해야 할 듯 합니다.</li>
+                </ol>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>지점</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/master/brc/m007.html"
+              target="_blank">office/html/master/brc/<strong>m007.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                상세&추가(팝업) → 퍼블적용
+              </li>
+              <li>
+                삭제확인(모달창) → 퍼블적용
+              </li>
+              <li>v.2.1.0 평일 주/야, 주말 주/야 항목 추가 → 퍼블적용</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="tr_off line_bot">
+          <td class="depth1"></td>
+          <td>멘토</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/master/mentor/m010.html"
+              target="_blank">office/html/master/mentor/<strong>m010.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                상세&추가(팝업) → 퍼블적용
+              </li>
+              <li>
+                삭제확인(모달창) → 퍼블적용
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1">유매니저</td>
+          <td>출결관리</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/att/m013.html"
+              target="_blank">office/html/manager/att/<strong>m013.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                출결상세(팝업) → 퍼블적용
+              </li>
+              <li>
+                순찰좌석/DM/전화/문자/사유/벌점/정기일정/출입기록(팝업) → 퍼블적용
+              </li>
+              <li>
+                전화걸기/삭제/휴대폰반납현황/벌점추가(모달창) → 퍼블적용
+              </li>
+              <li>v.2.0.3 - 기간설정필터 다시코딩, col 넓이값, 스크립트 수정</li>
+              <li>FO 디자인 완료 시, '미출석' 영역 컬러 변경예정</li>
+              <li>v.2.1.0
+                <ol>
+                  <li>상태값 '현재', '전체' 추가 및 순서변경 → 퍼블적용</li>
+                  <li>테이블 필드 값 수정 → 퍼블적용</li>
+                  <li>상세화면에서 사유/정기일정 메뉴(팝업포함) 제거 → 퍼블적용</li>
+                </ol>
+              </li>
+              <li>v.2.2.0
+                <ol>
+                  <li>오늘, 어제, 날짜선택 선택박스 수정</li>
+                  <li>벌점 상세팝업 수정 *벌점화면과 동일*</li>
+                  <li>출석현황 '외출' 추가</li>
+                </ol>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>메시지</td>
+          <td>DM</td>
+          <td></td>
+          <td><a href="./office/html/manager/msg/dm/m029.html"
+              target="_blank">office/html/manager/msg/dm/<strong>m029.html</strong></a></td>
+          <td rowspan="2">
+            <ul class="done">
+              <li>
+                [중복페이지] DM/전화/문자 → 리스트 동일, 상세(팝업) 다름
+              </li>
+              <li>
+                상세(팝업) → 퍼블적용
+              </li>
+              <li>v.2.1.0 글자수 15자 이후 줄임표 처리 한다고 해서 css 삭제 → 개발에서 적용</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td></td>
+          <td>문자</td>
+          <td></td>
+          <td><a href="./office/html/manager/msg/dm/m029.html"
+              target="_blank">office/html/manager/msg/dm/<strong>m029.html</strong></a></td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td></td>
+          <td>전화</td>
+          <td></td>
+          <td><a href="./office/html/manager/msg/cal/m031.html"
+              target="_blank">office/html/manager/msg/cal/<strong>m031.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                상세(팝업) → 퍼블적용
+              </li>
+              <li>
+                전화걸기(모달창) → 퍼블적용
+              </li>
+              <li>v.2.1.0 글자수 15자 이후 줄임표 처리 한다고 해서 css 삭제 → 개발에서 적용</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="tr_off">
+          <td class="depth1"></td>
+          <td>순찰일지</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/pat/m035.html"
+              target="_blank">office/html/manager/pat/<strong>m035.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                기간설정(필터) → 퍼블적용
+              </li>
+              <li>.v.2.2.2 기간선택 영역 수정 html : 49~69 line</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>벌점</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/pen/m037.html"
+              target="_blank">office/html/manager/pen/<strong>m037.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <!-- <li>
+                기간설정(필터) → 퍼블적용
+              </li> -->
+              <li>
+                월 선택(필터) → 퍼블적용
+              </li>
+              <li>
+                상세(팝업), 뒤로가기버튼 → 퍼블적용
+              </li>
+              <li>
+                벌점추가(모달창) → 퍼블적용
+              </li>
+              <li>v.2.0.3 - 기간설정필터 다시코딩</li>
+              <li>v.2.2.0
+                <ol>
+                  <li>오늘, 어제, 날짜선택 선택박스 수정</li>
+                  <li>부여시간 항목추가</li>
+                  <li>상세팝업 수정 *출결상세 > 벌점화면과 동일*</li>
+                </ol>
+              </li>
+              <li>v.2.2.1 적용버튼 삽입
+                <ol>
+                  <li>html : 157~170 line / 339~359 line</li>
+                  <li>이미지추가 : img/common/ico_calendar.svg</li>
+                </ol>
+              </li>
+              <li>v.2.2.2 월 선택 추가 html: 44~64 line </li>
+              <li class="modify">v.2.2.3 월 타이틀 추가 html: 44~46 line</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>공지사항</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/ntc/m039.html"
+              target="_blank">office/html/manager/ntc/<strong>m039.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                상세&추가(팝업) → 퍼블적용
+              </li>
+              <li>
+                삭제확인(모달창) → 퍼블적용
+              </li>
+              <li>v.2.2.0
+                <ol>
+                  <li>제목 세로값 수정</li>
+                  <li>조회 항목삭제</li>
+                </ol>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="tr_off">
+          <td class="depth1"></td>
+          <td>인터넷 연결</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/net/m045.html"
+              target="_blank">office/html/manager/net/<strong>m045.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                상세(팝업) → 퍼블적용
+              </li>
+              <li>
+                삭제확인(모달창) → 퍼블적용
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>요청사항</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/req/m048.html"
+              target="_blank">office/html/manager/req/<strong>m048.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                상세(팝업), 뒤로가기버튼 → 퍼블적용
+              </li>
+              <li>
+                답변 등록(모달창) → 퍼블적용
+              </li>
+              <li>v.2.1.0
+                <ol>
+                  <li>상단필터 - 체크박스(미확인/확인/답변완료) → 퍼블적용</li>
+                  <li>요청사항 상세 - 답변완료 시 노출되는 상세 → 퍼블적용 (주석처리)</li>
+                  <li>답변 작성 상세폼 추가 > 답변 등록(모달창) → 퍼블적용</li>
+                </ol>
+              </li>
+              <li>v.2.2.0 답변 등록 전 → 퍼블적용 (html:161~187line)<br>답변 등록 후 → 퍼블적용 (html:189~218line)</li>
+              <li>v.2.2.1 
+                <ol>
+                  <li>상세팝업 뒤로가기 버튼제거 닫기 버튼추가(152~161line)</li>
+                  <li>요청사항 답변작성 레이어가 열린 상태에서 row 선택 시 상세화면 노출 (table.js : 48~56line)</li>
+                </ol>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>공부시간</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/std/m050.html"
+              target="_blank">office/html/manager/std/<strong>m050.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                기간설정(필터) → 퍼블적용
+              </li>
+              <li>v.2.0.3 - 기간설정필터 다시코딩</li>
+              <li>v.2.2.0 오늘, 어제, 날짜선택 선택박스 수정</li>
+              <li>.v.2.2.2 기간선택 영역 수정 html : 49~69 line</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>출입기록</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/log/m051.html"
+              target="_blank">office/html/manager/log/<strong>m051.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                기간설정(필터) → 퍼블적용
+              </li>
+              <li>v.2.0.3 - 기간설정필터 다시코딩</li>
+              <li>v.2.2.0 오늘, 어제, 날짜선택 선택박스 수정</li>
+              <li>.v.2.2.2 기간선택 영역 수정 html : 49~69 line</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>회원정보</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/user/m052.html"
+              target="_blank">office/html/manager/user/<strong>m052.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>
+                상세(팝업) → 퍼블적용
+              </li>
+              <li>
+                삭제확인(모달창) → 퍼블적용
+              </li>
+              <li>
+                v.2.0.2 폴더명 변경 mem → user 변경, 레이아웃 영역 적용
+              </li>
+              <li>v.2.2.0
+                <ol>
+                  <li>상세화면 기획서 내용과 동일하게 수정</li>
+                  <li>상세화면 승인버튼 하단 추가</li>
+                </ol>
+              </li>
+              <li>v.2.2.1 
+                <ol>
+                  <li>상세팝업 more-inner 영역 삭제</li>
+                  <li>좌석번호지정 버튼 수정 (html : 227line)</li>
+                  <li>좌석번호지정 모달창 추가 (html : 624~660line)</li>
+                </ol>
+              </li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="depth1"></td>
+          <td>정기일정</td>
+          <td></td>
+          <td></td>
+          <td><a href="./office/html/manager/sch/m055.html"
+              target="_blank">office/html/manager/sch/<strong>m055.html</strong></a></td>
+          <td>
+            <ul class="done">
+              <li>정기일정 상세(팝업) → 퍼블적용</li>
+              <li>v.2.1.0 신규페이지 추가</li>
+              <li>v.2.2.0 상단 전체전송 버튼 삭제</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="#top" class="goTop">TOP</a>
+</body>
+
+</html>
