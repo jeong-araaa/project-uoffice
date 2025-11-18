@@ -1688,6 +1688,11 @@ component > Modal(모달)
 		font-size: 15px;
 		color: var(--white-color);
 		box-sizing: border-box;
+
+		&.is-disabled {
+			cursor: default !important;
+			opacity:0.4;
+		}
 	}
 
 	.modal-btn-close {
@@ -3441,6 +3446,7 @@ Table > Basic(기본)
 						.form-detail-cont {
 							padding-top: 20px;
 							border-top: 1px solid #ddd;
+							word-wrap:break-word;
 						}
 					}
 

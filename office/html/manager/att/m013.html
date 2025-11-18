@@ -896,9 +896,16 @@
             <div class="card-body">
               <div class="form-view form-detail" style="display: block;">
                 <div class="form-datas">
-                  <input type="date" class="int">
+                  <div class="date-field">
+                    <input type="date" class="int">
+                    <button type="button" class="btn-calendar"></button>
+                  </div>
                   <span>~</span>
-                  <input type="date" class="int">
+                  <div class="date-field">
+                    <input type="date" class="int">
+                    <button type="button" class="btn-calendar"></button>
+                  </div>
+                  <button type="button" class="comm-btn btn-gray bd-radius-4">적용</button>
                 </div>
                 <div class="form-detail-head">
                   <div class="form-col">
@@ -1149,7 +1156,7 @@
               </div><!-- //modal-body -->
               <div class="modal-foot justify-content-end pt-0">
                 <a href="javascript:;" class="modal-btn-close me-10" data-modal-close>취소</a>
-                <a href="#" class="modal-btn-submit" data-modal-submit>추가</a>
+                <a href="#" class="modal-btn-submit is-disabled" data-modal-submit>추가</a>
               </div><!-- //modal-foot -->
             </div>
           </div><!-- //modal-wrap -->
@@ -1362,6 +1369,20 @@
       } else {
         etcBox.style.display = 'none';
       }
+    });
+
+
+    // ==========================
+    // 커스텀 캘린더 버튼 클릭 시 input 클릭 트리거
+    // ==========================
+    document.querySelectorAll('.form-datas .btn-calendar').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const input = btn.previousElementSibling;
+        if (input && input.type === 'date') {
+          input.showPicker?.(); // 최신 브라우저(크롬, 사파리)
+          input.focus();        // 혹시 showPicker 미지원 시 포커스
+        }
+      });
     });
   </script>
 </body>

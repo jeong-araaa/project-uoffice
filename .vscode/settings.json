@@ -1,0 +1,29 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "office/assets/css"
+        },
+        {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": "office/assets/css"
+        }
+    ],
+    "liveSassCompile.settings.generateMap": false,
+    "liveSassCompile.settings.includeItems": [
+        "office/assets/scss/default.scss"
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**",
+        "**/_*.scss"
+    ],
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    // "editor.formatOnSave": true,
+    "liveServer.settings.port": 5501
+}

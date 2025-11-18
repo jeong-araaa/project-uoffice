@@ -2380,6 +2380,10 @@ component > Modal(모달)
   color: var(--white-color);
   box-sizing: border-box;
 }
+.modal .modal-btn-submit.is-disabled {
+  cursor: default !important;
+  opacity: 0.4;
+}
 .modal .modal-btn-close {
   display: flex;
   align-items: center;
@@ -3887,6 +3891,7 @@ Table > Basic(기본)
 .popup-details__inner .popup-details .card-body .form-view.form-detail .form-detail-body .form-detail-cont {
   padding-top: 20px;
   border-top: 1px solid #ddd;
+  word-wrap: break-word;
 }
 .popup-details__inner .popup-details .card-body .form-view.form-detail .form-detail-last {
   margin-top: 20px;
